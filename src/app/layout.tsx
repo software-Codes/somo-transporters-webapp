@@ -87,7 +87,6 @@ export default function RootLayout({
       <body className={`${jakarta.variable} antialiased`}>
         <ThemeProvider 
           attribute="class" 
-          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

@@ -1,5 +1,4 @@
 import React from 'react'
-import { ModeToggle } from './components/mode-toggle';
 import { Component } from './components/chart-sample';
 
 const Page = () => {
