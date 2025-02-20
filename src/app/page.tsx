@@ -3,6 +3,7 @@ import NavbarHeader from "@/components/navabar-header";
 import { Component } from "./components/chart-sample";
 import HeroProfile from "@/components/hero-profile";
 import AboutHomeComponent from "@/components/about-us-home";
+import WhyChooseUs from "@/components/why-choose-us";
 
 const Page = () => {
   return (
@@ -12,6 +13,7 @@ const Page = () => {
         {/* Your homepage content goes here */}
         <HeroProfile />
         <AboutHomeComponent />
+        <WhyChooseUs />
       </main>
     </div>
   );

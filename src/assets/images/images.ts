@@ -1,5 +1,11 @@
-export {default as HeroImage1} from  './highway-istanbul.jpg';
-export {default as SomoLogo } from './somoLogo.png';
-export {default as TruckImg} from './truck.jpeg'; 
-export {default as LadyImg} from './female-truck-driver-working.jpg';
-export {default as Frontview} from './front-view-man-holding-clipboard.jpg'
+export { default as HeroImage1 } from "./highway-istanbul.jpg";
+export { default as SomoLogo } from "./somoLogo.png";
+export { default as TruckImg } from "./truck.jpeg";
+export { default as LadyImg } from "./female-truck-driver-working.jpg";
+export { default as Frontview } from "./front-view-man-holding-clipboard.jpg";
+export { default as FleetImg } from "./modern-truck-fleet.jpg";
+export { default as TrackingImg } from "./gps-tracking-system.jpg";
+export { default as MaintenanceImg } from "./vehicle-maintenance.jpg";
+export { default as SafetyImg } from "./safety-inspection.jpg";
+export { default as ClientsImg } from "./client-partnerships.jpg";
+export { default as EmergencyImg } from "./emergency-response-team.jpg";
