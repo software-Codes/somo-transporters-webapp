@@ -11,7 +11,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <div className="w-full px-4 py-16 md:py-24 lg:py-32 bg-blue-300">
+    <div className="w-full px-4 py-16 md:py-24 lg:py-32 bg-blue-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           {/* Text Content */}

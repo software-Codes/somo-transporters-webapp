@@ -74,6 +74,12 @@ export async function generateMetadata({ params, searchParams }: MetadataProps):
       locale: 'en_US',
       type: 'website',
     },
+    icons: [
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+    ],
   };
 }
 

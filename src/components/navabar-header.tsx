@@ -31,7 +31,7 @@ const NavbarHeader = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 --font-jakarta-ExtraLight">
+          <nav className="hidden md:flex items-center space-x-4 text-xl font-sans">
             <Link
               href="/"
               className={`text-lg px-4 py-2 transition-colors ${

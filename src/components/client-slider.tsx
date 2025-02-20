@@ -59,7 +59,7 @@ const ClientsSlider = () => {
     <section className="w-full py-8 bg-gray-50 overflow-hidden sm:py-12 md:py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h3 className="text-center text-gray-600 text-base font-medium mb-6 sm:text-lg sm:mb-8 md:mb-12">
-          Trusted by Industry Leaders
+         World-wide Trusted by Oil Industry Leaders
         </h3>
 
         <div
