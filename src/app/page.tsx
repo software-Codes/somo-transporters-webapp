@@ -4,6 +4,7 @@ import { Component } from "./components/chart-sample";
 import HeroProfile from "@/components/hero-profile";
 import AboutHomeComponent from "@/components/about-us-home";
 import WhyChooseUs from "@/components/why-choose-us";
+import ClientsSlider from "@/components/client-slider";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
         <HeroProfile />
         <AboutHomeComponent />
         <WhyChooseUs />
+        <ClientsSlider />
       </main>
     </div>
   );
