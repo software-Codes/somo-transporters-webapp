@@ -1,13 +1,17 @@
-import React from 'react'
-import { Component } from './components/chart-sample';
+import React from "react";
+import NavbarHeader from "@/components/navabar-header";
+import { Component } from "./components/chart-sample";
 
 const Page = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen w-full' >
-      <Component/>
-
+    <div className="flex flex-col min-h-screen w-full bg-white">
+      <NavbarHeader />
+      <main className="">
+        {/* Your homepage content goes here */}
+        <Component />
+      </main>
     </div>
-  )
-}
+  );
+};
 
 export default Page;

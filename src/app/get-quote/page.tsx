@@ -1,12 +1,16 @@
-import React from 'react'
+import NavbarHeader from "@/components/navabar-header";
+import React from "react";
 
 const GetQuotationPage = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen w-full' >
-        <h1>GetQuotationPage</h1>
-      
-    </div>
-  )
-}
+    <div className="">
+      <NavbarHeader />
 
-export default GetQuotationPage
+      <p className="text-3xl text-center mt-10 flex text-gray-400 justify-center" >
+        make quotationn here
+      </p>
+    </div>
+  );
+};
+
+export default GetQuotationPage;
