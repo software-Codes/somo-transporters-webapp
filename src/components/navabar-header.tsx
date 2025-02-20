@@ -26,12 +26,12 @@ const NavbarHeader = () => {
               width={120}
               height={120}
               alt="logo"
-              className=""
+              className="mr-2"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 --font-jakarta-ExtraLight">
             <Link
               href="/"
               className={`text-lg px-4 py-2 transition-colors ${
@@ -60,7 +60,7 @@ const NavbarHeader = () => {
                   : "text-gray-800 hover:text-orange-600"
               }`}
             >
-              Services`
+              Services
             </Link>
             <Link
               href="/contact"

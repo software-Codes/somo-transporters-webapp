@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarHeader from "@/components/navabar-header";
 import { Component } from "./components/chart-sample";
+import HeroProfile from "@/components/hero-profile";
 
 const Page = () => {
   return (
@@ -8,7 +9,7 @@ const Page = () => {
       <NavbarHeader />
       <main className="">
         {/* Your homepage content goes here */}
-        <Component />
+        <HeroProfile />
       </main>
     </div>
   );
