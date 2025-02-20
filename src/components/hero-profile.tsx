@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { HeroImage1 } from "@/assets/images/images";
+import { HeroImage1, TruckImg } from "@/assets/images/images";
+import Link from "next/link";
 
 const HeroProfile = () => {
   return (
@@ -11,7 +12,7 @@ const HeroProfile = () => {
         {/* Background Container with Image */}
         <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
           <Image
-            src={HeroImage1}
+            src={TruckImg}
             alt="Logistics containers and shipping yard"
             fill
             priority
@@ -37,15 +38,22 @@ const HeroProfile = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
+            <Link href='/join-us'>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-lg rounded-full">
               Join{""} us
             </Button>
+            </Link>
+
+            <Link href='/get-quote'>
             <Button
               variant="outline"
               className="bg-white hover:bg-gray-100 text-gray-800 px-8 py-6 text-lg rounded-full"
             >
               Book a delivery
             </Button>
+            </Link>
+
+
           </div>
         </div>
       </div>
