@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
               <div className="inline-block px-5 py-2 bg-orange-100 text-orange-600 rounded-full font-medium text-sm mb-6 shadow-sm transform hover:scale-105 transition-transform">
                 WHY CHOOSE US
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+              <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
                 Why Trust Somo Transporters for Your
                 <span className="text-orange-500 block mt-2">
                   Petroleum & Logistics Needs

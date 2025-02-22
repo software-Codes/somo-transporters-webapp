@@ -5,6 +5,7 @@ import HeroProfile from "@/components/hero-profile";
 import AboutHomeComponent from "@/components/about-us-home";
 import WhyChooseUs from "@/components/why-choose-us";
 import ClientsSlider from "@/components/client-slider";
+import OurServices from "@/components/our-services";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
         <AboutHomeComponent />
         <WhyChooseUs />
         <ClientsSlider />
+        <OurServices />
       </main>
     </div>
   );
