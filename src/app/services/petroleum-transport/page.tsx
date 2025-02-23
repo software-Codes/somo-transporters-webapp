@@ -70,7 +70,7 @@ const PetroleumTransport = () => {
                   Real-time GPS tracking and monitoring systems allow constant
                   contact with all trucks, ensuring security and timely
                   delivery.
-                </p>
+                </p>  
               </div>
             </div>
             <div className="flex items-start gap-4">
