@@ -54,7 +54,9 @@ const OurServices = () => {
 
           {/* LPG Transport */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-            <h3 className="text-xl text-black font-semibold mb-3">LPG Transport</h3>
+            <h3 className="text-xl text-black font-semibold mb-3">
+              LPG Transport
+            </h3>
             <p className="text-gray-600 mb-4">
               Professional transportation of LPG products across East Africa
               with advanced tracking technology and constant monitoring for

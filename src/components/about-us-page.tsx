@@ -46,7 +46,7 @@ const AboutUsPage = () => {
     <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="relative w-full">
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
             src={LadyImg}
             alt="Somo Transporters operations"
@@ -81,8 +81,8 @@ const AboutUsPage = () => {
               className="object-cover"
             />
           </div>
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+          <div> 
+            <h2 className="text-3xl text-black font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 mb-6">
               Established in 2006, Somo Transporters has grown from a local
               Kenyan operator to a regional leader in bulk petroleum and dry
@@ -97,7 +97,7 @@ const AboutUsPage = () => {
                   <div className="flex items-center gap-3">
                     <div className="text-orange-500">{stat.icon}</div>
                     <div>
-                      <div className="text-xl font-bold">{stat.value}</div>
+                      <div className="text-xl text-black  font-bold">{stat.value}</div>
                       <div className="text-sm text-gray-600">{stat.label}</div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const AboutUsPage = () => {
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+            <h2 className="text-3xl text-black font-bold mb-6">Our Mission</h2>
             <p className="text-gray-600 mb-6">
               To be the most competitive, efficient, and HSSE-compliant
               transporter of petroleum products and dry cargo in East and
@@ -121,7 +121,7 @@ const AboutUsPage = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+            <h2 className="text-3xl text-black font-bold mb-6">Our Vision</h2>
             <p className="text-gray-600">
               To revolutionize East African logistics through innovative
               technology, unmatched reliability, and a safety-first culture that
@@ -133,7 +133,7 @@ const AboutUsPage = () => {
 
       {/* Organizational Structure */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl text-black font-bold mb-8 text-center">
           Leadership Structure
         </h2>
         <div className="grid md:grid-cols-3 gap-6">

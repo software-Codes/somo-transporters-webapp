@@ -67,10 +67,10 @@ const AllServices = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="relative w-full">
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
             src={LadyImg}
             alt="Logistics operations"
@@ -97,7 +97,7 @@ const AllServices = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl text-black md:text-4xl font-bold text-center mb-12">
           Our Core Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -107,7 +107,7 @@ const AllServices = () => {
               className="group relative bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-4 text-orange-500">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              <h3 className="text-xl text-black font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <div className="text-sm font-semibold text-orange-500">
                 {service.stats}
@@ -119,18 +119,17 @@ const AllServices = () => {
       </div>
 
       {/* Client Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-
           <ClientsSlider />
         </div>
       </div>
 
       {/* USP Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Why Choose Us</h2>
+            <h2 className="text-3xl text-black font-bold">Why Choose Us</h2>
             <p className="text-gray-600">
               With over 15 years experience in East African logistics, we
               combine local expertise with global standards
@@ -139,7 +138,7 @@ const AllServices = () => {
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 mt-1 text-orange-500">•</div>
                 <div>
-                  <h3 className="font-semibold text-lg">Advanced Tracking</h3>
+                  <h3 className="font-semibold text-black text-lg">Advanced Tracking</h3>
                   <p className="text-gray-600">
                     GPS monitoring and Chui Tracking System integration
                   </p>
@@ -148,7 +147,7 @@ const AllServices = () => {
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 mt-1 text-orange-500">•</div>
                 <div>
-                  <h3 className="font-semibold text-lg">Quality Assurance</h3>
+                  <h3 className="font-semibold text-black text-lg">Quality Assurance</h3>
                   <p className="text-gray-600">
                     Triple-check sealing system and driver integrity programs
                   </p>
@@ -157,7 +156,7 @@ const AllServices = () => {
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 mt-1 text-orange-500">•</div>
                 <div>
-                  <h3 className="font-semibold text-lg">Emergency Ready</h3>
+                  <h3 className="font-semibold text-black text-lg">Emergency Ready</h3>
                   <p className="text-gray-600">
                     24/7 response team for spills, accidents, and security
                     incidents
