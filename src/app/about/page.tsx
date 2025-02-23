@@ -1,14 +1,17 @@
-import React from 'react'
+import AboutUsPage from "@/components/about-us-page";
+import NavbarHeader from "@/components/navabar-header";
+import React from "react";
 
 const Aboutpage = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen w-full' >
-        <p className='text-2xl' >
-            this is the about page
-        </p>
-      
-    </div>
-  )
-}
+    <div className="flex flex-col min-h-screen w-full bg-white">
+      <NavbarHeader />
 
-export default Aboutpage
+      <main>
+        <AboutUsPage />
+      </main>
+    </div>
+  );
+};
+
+export default Aboutpage;

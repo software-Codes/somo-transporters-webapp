@@ -11,7 +11,7 @@ const OurServices = () => {
             OUR SERVICES
           </button>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Elevate Your Petroleum Transportation  {' '}with{" "}
+            Elevate Your Petroleum Transportation with{" "}
             <span className="text-orange-500">Our services</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -110,7 +110,10 @@ const OurServices = () => {
             </Link>
           </div>
         </div>
-        <Link href="/services" className="block text-center rounded-lg mt-8 md:mt-12">
+        <Link
+          href="/services"
+          className="block text-center rounded-lg mt-8 md:mt-12"
+        >
           <Button
             size="lg"
             className="mx-auto bg-orange-400 hover:bg-orange-500 rounded-lg transition-colors px-8 py-6 text-lg w-full md:w-auto"
