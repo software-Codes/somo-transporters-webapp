@@ -7,6 +7,9 @@ import WhyChooseUs from "@/components/why-choose-us";
 import ClientsSlider from "@/components/client-slider";
 import OurServices from "@/components/our-services";
 import Impressed from "@/components/impressed";
+import VehicleCrew from "@/components/register-vehicle";
+import ContactCTA from "@/components/contact-cta";
+import Footer from "@/components/footer";
 
 const Page = () => {
   return (
@@ -20,6 +23,9 @@ const Page = () => {
         <ClientsSlider />
         <OurServices />
         <Impressed />
+        <VehicleCrew />
+        <ContactCTA />
+        <Footer />
       </main>
     </div>
   );

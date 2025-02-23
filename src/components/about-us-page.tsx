@@ -8,6 +8,7 @@ import {
   FaUsers,
   FaMapMarkedAlt,
 } from "react-icons/fa";
+import Footer from "./footer";
 
 const AboutUsPage = () => {
   const structure = [
@@ -176,6 +177,7 @@ const AboutUsPage = () => {
       </div>
 
       {/* <FooterInfo /> */}
+      <Footer />
     </div>
   );
 };

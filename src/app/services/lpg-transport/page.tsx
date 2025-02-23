@@ -8,7 +8,7 @@ const LpgTransport = () => {
     <div className="w-full bg-white ">
       {/* Hero Section */}
       <div className="relative w-full">
-        <div className="w-full h-[400px] sm:h-[600px] md:h-[700px] relative">
+        <div className="w-full h-[400px] sm:h-[600px] md:h-[600px] relative">
           <Image
             src={TruckImg}
             alt="LPG transport truck"

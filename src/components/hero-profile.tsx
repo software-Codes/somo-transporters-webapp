@@ -10,7 +10,7 @@ const HeroProfile = () => {
       {/* Hero Content - Container for positioning */}
       <div className="relative w-full">
         {/* Background Container with Image */}
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
             src={TruckImg}
             alt="Logistics containers and shipping yard"

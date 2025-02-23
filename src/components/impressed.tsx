@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { ImpressedImg } from "@/assets/images/images";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 const Impressed = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-12 ">
       <div className="relative w-full">
         {/* Background Container with Image */}
         <div className="w-full h-[300px] sm:h-[600px] md:h-[400px] relative">
@@ -21,22 +23,19 @@ const Impressed = () => {
         </div>
 
         {/* Text Content positioned over the image */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-16">
-          <div className="flex flex-col items-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Reliable & Efficient Logistics <br /> by{" "}
-              <span className="text-orange-500">Somo Transporters</span>
-            </h1>
-
-            <p className="text-white text-base md:text-lg max-w-2xl mb-8">
-              Seamless, secure, and cost-effective transportation solutions
-              across East Africa.
-            </p>
-          </div>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center lg:text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Impressed With Our Services?
+          </h2>
+          <Link href="/contact" >
+          <Button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors" >
+            Contact  Us
+          </Button>
+          </Link>
         </div>
       </div>
     </div>
   );
-};
+}; 
 
 export default Impressed;

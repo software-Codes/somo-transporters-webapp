@@ -10,6 +10,8 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import ClientsSlider from "./client-slider";
+import Footer from "./footer";
+import Link from "next/link";
 
 const AllServices = () => {
   const services = [
@@ -57,17 +59,17 @@ const AllServices = () => {
     },
   ];
 
-  const clients = [
-    "Mogas (U) Ltd",
-    "City Oil (U) Ltd",
-    "Hared Petroleum Ltd",
-    "Stabex International Ltd",
-    "Banoda Oil Ltd",
-    "Kobil Uganda Ltd",
-  ];
+  // const clients = [
+  //   "Mogas (U) Ltd",
+  //   "City Oil (U) Ltd",
+  //   "Hared Petroleum Ltd",
+  //   "Stabex International Ltd",
+  //   "Banoda Oil Ltd",
+  //   "Kobil Uganda Ltd",
+  // ];
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white pt-16">
       {/* Hero Section */}
       <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
@@ -194,15 +196,22 @@ const AllServices = () => {
             Partner with East Africa's most reliable transport solution provider
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/get-quote" >
             <button className="bg-white text-orange-500 px-8 py-3 rounded-full hover:bg-orange-100 transition-colors">
               Request Consultation
             </button>
+            </Link>
+            <Link href="/contact" >
+
             <button className="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-orange-500 transition-colors">
               Emergency Contact
             </button>
+            </Link>
+
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
