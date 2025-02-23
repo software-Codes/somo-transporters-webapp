@@ -14,7 +14,7 @@ const AboutHomeComponent = () => {
             <div className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full font-medium text-sm mb-4">
               ABOUT US
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-4">
               Redefining Efficiency in
               <span className="text-orange-500">Transport & Logistics</span>
             </h2>

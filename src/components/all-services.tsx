@@ -121,9 +121,7 @@ const AllServices = () => {
       {/* Client Section */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center mb-8">
-            Trusted By Industry Leaders
-          </h3>
+
           <ClientsSlider />
         </div>
       </div>

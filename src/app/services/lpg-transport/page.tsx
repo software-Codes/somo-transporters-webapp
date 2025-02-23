@@ -5,7 +5,7 @@ import { TruckImg } from "@/assets/images/images";
 
 const LpgTransport = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-white ">
       {/* Hero Section */}
       <div className="relative w-full">
         <div className="w-full h-[400px] sm:h-[600px] md:h-[700px] relative">
@@ -35,7 +35,7 @@ const LpgTransport = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         {/* Introduction */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Introduction</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Introduction</h2>
           <p className="text-gray-700 leading-relaxed">
             As a key player in East Africa's energy logistics, Somo Transporters
             provides specialized LPG transportation services since 2006. Our
@@ -47,12 +47,12 @@ const LpgTransport = () => {
 
         {/* Key Benefits */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Key Benefits</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Key Benefits</h2>
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">
+                <h3 className="font-semibold text-black text-xl mb-2">
                   Explosion Prevention
                 </h3>
                 <p className="text-gray-700">
@@ -64,7 +64,7 @@ const LpgTransport = () => {
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">
+                <h3 className="font-semibold text-black text-xl mb-2">
                   Real-Time Monitoring
                 </h3>
                 <p className="text-gray-700">
@@ -76,7 +76,7 @@ const LpgTransport = () => {
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">
+                <h3 className="font-semibold text-black text-xl mb-2">
                   Certified Handling
                 </h3>
                 <p className="text-gray-700">
@@ -90,24 +90,24 @@ const LpgTransport = () => {
 
         {/* How it Works */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Process</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Our Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Safety Inspection</h3>
+              <h3 className="font-semibold  text-black text-xl mb-3">Safety Inspection</h3>
               <p className="text-gray-700">
                 Comprehensive vehicle and equipment checks before each
                 deployment
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Secure Loading</h3>
+              <h3 className="font-semibold text-black text-xl mb-3">Secure Loading</h3>
               <p className="text-gray-700">
                 Professional handling using certified loading equipment and
                 procedures
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Guarded Transit</h3>
+              <h3 className="font-semibold text-black text-xl mb-3">Guarded Transit</h3>
               <p className="text-gray-700">
                 Armed escort options and real-time monitoring throughout
                 transportation
@@ -118,7 +118,7 @@ const LpgTransport = () => {
 
         {/* Call to Action */}
         <section className="text-center bg-gray-50 rounded-xl p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-4">
             Need Reliable LPG Transportation?
           </h2>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">

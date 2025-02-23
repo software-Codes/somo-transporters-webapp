@@ -4,13 +4,13 @@ import { Button } from "./ui/button";
 
 const OurServices = () => {
   return (
-    <div className="w-full py-16 px-4 bg-white">
+    <div className="w-full  px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <button className="bg-orange-100 text-orange-500 px-6 py-2 rounded-full mb-4 font-medium">
             OUR SERVICES
           </button>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-4">
             Elevate Your Petroleum Transportation with{" "}
             <span className="text-orange-500">Our services</span>
           </h2>
@@ -23,7 +23,7 @@ const OurServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Bulk Petroleum Transport */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-            <h3 className="text-xl font-semibold mb-3">
+            <h3 className="text-xl text-black font-semibold mb-3">
               Bulk Petroleum Transport
             </h3>
             <p className="text-gray-600 mb-4">
@@ -54,7 +54,7 @@ const OurServices = () => {
 
           {/* LPG Transport */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-            <h3 className="text-xl font-semibold mb-3">LPG Transport</h3>
+            <h3 className="text-xl text-black font-semibold mb-3">LPG Transport</h3>
             <p className="text-gray-600 mb-4">
               Professional transportation of LPG products across East Africa
               with advanced tracking technology and constant monitoring for
@@ -82,7 +82,7 @@ const OurServices = () => {
           </div>
 
           {/* Dry Cargo Transport */}
-          <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div className="bg-white  text-black   rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
             <h3 className="text-xl font-semibold mb-3">Dry Cargo Transport</h3>
             <p className="text-gray-600 mb-4">
               Comprehensive bulk dry cargo transportation services with

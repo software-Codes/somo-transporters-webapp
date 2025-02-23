@@ -6,6 +6,7 @@ import AboutHomeComponent from "@/components/about-us-home";
 import WhyChooseUs from "@/components/why-choose-us";
 import ClientsSlider from "@/components/client-slider";
 import OurServices from "@/components/our-services";
+import Impressed from "@/components/impressed";
 
 const Page = () => {
   return (
@@ -18,6 +19,7 @@ const Page = () => {
         <WhyChooseUs />
         <ClientsSlider />
         <OurServices />
+        <Impressed />
       </main>
     </div>
   );

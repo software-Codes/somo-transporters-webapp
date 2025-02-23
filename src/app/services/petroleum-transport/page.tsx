@@ -4,7 +4,7 @@ import { TruckImg } from "@/assets/images/images";
 
 const PetroleumTransport = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="relative w-full">
         <div className="w-full h-[400px] sm:h-[600px] md:h-[700px] relative">
@@ -35,7 +35,7 @@ const PetroleumTransport = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         {/* Introduction */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Introduction</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Introduction</h2>
           <p className="text-gray-700 leading-relaxed">
             Somo Transporters specializes in cross-border haulage of petroleum
             products, serving reputable and large corporations across East
@@ -47,12 +47,12 @@ const PetroleumTransport = () => {
 
         {/* Key Benefits */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Key Benefits</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Key Benefits</h2>
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">HSSE Compliance</h3>
+                <h3 className="font-semibold text-black text-xl mb-2">HSSE Compliance</h3>
                 <p className="text-gray-700">
                   Our operations strictly adhere to Health, Safety, Security,
                   and Environmental standards, ensuring safe transportation of
@@ -63,20 +63,20 @@ const PetroleumTransport = () => {
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">
+                <h3 className="font-semibold text-black  text-xl mb-2">
                   Advanced Tracking
                 </h3>
                 <p className="text-gray-700">
                   Real-time GPS tracking and monitoring systems allow constant
                   contact with all trucks, ensuring security and timely
                   delivery.
-                </p>  
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-6 h-6 mt-1 text-orange-500">•</div>
               <div>
-                <h3 className="font-semibold text-xl mb-2">
+                <h3 className="font-semibold text-black text-xl mb-2">
                   Quality Assurance
                 </h3>
                 <p className="text-gray-700">
@@ -91,24 +91,24 @@ const PetroleumTransport = () => {
 
         {/* How it Works */}
         <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">How it Works</h2>
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">How it Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Request a Quote</h3>
+              <h3 className="font-semibold text-black text-xl mb-3">Request a Quote</h3>
               <p className="text-gray-700">
                 Contact us with your petroleum transport requirements, including
                 volume, origin, and destination points.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Vehicle Assignment</h3>
+              <h3 className="font-semibold text-black text-xl mb-3">Vehicle Assignment</h3>
               <p className="text-gray-700">
                 We assign well-maintained vehicles and experienced drivers from
                 our fleet of over 50 specialized trucks.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="font-semibold text-xl mb-3">Safe Delivery</h3>
+              <h3 className="font-semibold text-black text-xl mb-3">Safe Delivery</h3>
               <p className="text-gray-700">
                 Your products are transported safely with real-time tracking and
                 our emergency response capabilities.
@@ -119,7 +119,7 @@ const PetroleumTransport = () => {
 
         {/* Call to Action */}
         <section className="text-center bg-gray-50 rounded-xl p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-2xl text-black md:text-3xl font-bold mb-4">
             Ready to Transport Your Petroleum Products?
           </h2>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">

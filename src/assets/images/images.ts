@@ -9,3 +9,4 @@ export { default as MaintenanceImg } from "./vehicle-maintenance.jpg";
 export { default as SafetyImg } from "./safety-inspection.jpg";
 export { default as ClientsImg } from "./client-partnerships.jpg";
 export { default as EmergencyImg } from "./emergency-response-team.jpg";
+export {default as ImpressedImg} from "./impressed.jpg";
