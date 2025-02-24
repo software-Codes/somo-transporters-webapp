@@ -91,7 +91,6 @@ export const metadata: Metadata = {
   description: "Your trusted distribution partner",
   authors: [{ name: "Somo Distributors" }],
   keywords: ["distribution", "somo", "business"],
-  metadataBase: new URL('XXXXXXXXXXXXXXXXXXXXXXX'),
   openGraph: {
     title: 'Somo Distributors',
     description: 'Your trusted distribution partner',
