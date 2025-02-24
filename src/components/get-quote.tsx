@@ -166,7 +166,9 @@ const GetQuotation = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className={formErrors.name ? "border-red-500" : ""}
+                    className={
+                      formErrors.name ? "border-red-500" : "text-black"
+                    }
                   />
                   {formErrors.name && (
                     <p className="text-red-500 text-sm">{formErrors.name}</p>
@@ -185,7 +187,9 @@ const GetQuotation = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your email address"
-                    className={formErrors.email ? "border-red-500" : ""}
+                    className={
+                      formErrors.email ? "border-red-500" : "text-black"
+                    }
                   />
                   {formErrors.email && (
                     <p className="text-red-500 text-sm">{formErrors.email}</p>
@@ -204,7 +208,9 @@ const GetQuotation = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Your phone number"
-                    className={formErrors.phone ? "border-red-500" : ""}
+                    className={
+                      formErrors.phone ? "border-red-500" : "text-black"
+                    }
                   />
                   {formErrors.phone && (
                     <p className="text-red-500 text-sm">{formErrors.phone}</p>
@@ -222,6 +228,7 @@ const GetQuotation = () => {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Your company name"
+                    className="text-black"
                   />
                 </div>
               </div>
@@ -249,7 +256,7 @@ const GetQuotation = () => {
                     }
                   >
                     <SelectTrigger
-                      className={formErrors.serviceType ? "border-red-500" : ""}
+                      className={formErrors.serviceType ? "border-red-500" : "text-black"}
                     >
                       <SelectValue placeholder="Select service type" />
                     </SelectTrigger>
@@ -284,7 +291,9 @@ const GetQuotation = () => {
                     value={formData.cargoType}
                     onChange={handleChange}
                     placeholder="e.g., Diesel, Gasoline, Maize, Construction Materials"
-                    className={formErrors.cargoType ? "border-red-500" : ""}
+                    className={
+                      formErrors.cargoType ? "border-red-500" : "text-black"
+                    }
                   />
                   {formErrors.cargoType && (
                     <p className="text-red-500 text-sm">
@@ -304,6 +313,7 @@ const GetQuotation = () => {
                     value={formData.weight}
                     onChange={handleChange}
                     placeholder="e.g., 20 tons"
+                    className="text-black"
                   />
                 </div>
 
@@ -318,6 +328,7 @@ const GetQuotation = () => {
                     value={formData.volume}
                     onChange={handleChange}
                     placeholder="e.g., 40 cubic meters"
+                    className="text-black"
                   />
                 </div>
               </div>
@@ -342,7 +353,9 @@ const GetQuotation = () => {
                     value={formData.origin}
                     onChange={handleChange}
                     placeholder="e.g., Mombasa, Kenya"
-                    className={formErrors.origin ? "border-red-500" : ""}
+                    className={
+                      formErrors.origin ? "border-red-500 text-black " : "text-black"
+                    }
                   />
                   {formErrors.origin && (
                     <p className="text-red-500 text-sm">{formErrors.origin}</p>
@@ -360,7 +373,7 @@ const GetQuotation = () => {
                     value={formData.destination}
                     onChange={handleChange}
                     placeholder="e.g., Kampala, Uganda"
-                    className={formErrors.destination ? "border-red-500" : ""}
+                    className={formErrors.destination ? "border-red-500 text-black " : "text-black"}
                   />
                   {formErrors.destination && (
                     <p className="text-red-500 text-sm">
@@ -380,6 +393,8 @@ const GetQuotation = () => {
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}
+                    placeholder="Preferred date for shipment"
+                    className="text-black"
                   />
                 </div>
 
@@ -394,6 +409,7 @@ const GetQuotation = () => {
                     value={formData.safetyRequirements}
                     onChange={handleChange}
                     placeholder="Any specific safety requirements"
+                    className="text-black"
                   />
                 </div>
               </div>
@@ -417,6 +433,7 @@ const GetQuotation = () => {
                   onChange={handleTextareaChange}
                   placeholder="Please provide any additional details about your shipment needs"
                   rows={4}
+                  className="text-black"
                 />
               </div>
             </div>

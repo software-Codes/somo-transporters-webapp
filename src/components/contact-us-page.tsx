@@ -161,6 +161,7 @@ const ContactUsMainComponent = () => {
                 onChange={handleChange}
                 placeholder="John Doe"
                 required
+                className="text-black"
               />
             </div>
 
@@ -180,6 +181,7 @@ const ContactUsMainComponent = () => {
                 onChange={handleChange}
                 placeholder="john@company.com"
                 required
+                className="text-black"
               />
             </div>
 
@@ -199,6 +201,7 @@ const ContactUsMainComponent = () => {
                   onChange={handleChange}
                   placeholder="Manager"
                   required
+                  className="text-black"
                 />
               </div>
 
@@ -218,6 +221,7 @@ const ContactUsMainComponent = () => {
                   onChange={handleChange}
                   placeholder="0722 455 678"
                   required
+                  className="text-black"
                 />
               </div>
             </div>
@@ -238,6 +242,7 @@ const ContactUsMainComponent = () => {
                 placeholder="Tell us what we can help you with"
                 rows={5}
                 required
+                className="text-black"
               />
             </div>
 

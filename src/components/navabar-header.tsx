@@ -118,6 +118,7 @@ const NavbarHeader = () => {
               { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact Us" },
               { href: "/join-us", label: "Join Us" },
+              { href: "/gallery", label: "Gallery" },
             ].map((link) => (
               <Link
                 key={link.href}
