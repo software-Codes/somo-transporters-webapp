@@ -73,8 +73,9 @@ const AboutUsPage = () => {
 
       {/* Our Story Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[500px]  rounded-xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Image Section */}
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] rounded-xl overflow-hidden">
             <Image
               src={OurStory}
               alt="Company history"
@@ -82,9 +83,13 @@ const AboutUsPage = () => {
               className="object-cover"
             />
           </div>
-          <div>
-            <h2 className="text-3xl text-black font-bold mb-6">Our Story</h2>
-            <p className="text-gray-600 mb-6">
+
+          {/* Text and Stats Section */}
+          <div className="px-4 sm:px-6 md:px-8 lg:px-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-black font-bold mb-4 sm:mb-6">
+              Our Story
+            </h2>
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
               Established in 2006, Somo Transporters has grown from a local
               Kenyan operator to a regional leader in bulk petroleum and dry
               cargo logistics. Our journey began with a single truck and a
@@ -92,16 +97,22 @@ const AboutUsPage = () => {
               specialized vehicles serving major corporations across East
               Africa.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="bg-orange-50 p-4 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="text-orange-500">{stat.icon}</div>
+                    <div className="text-orange-500 text-xl sm:text-2xl">
+                      {stat.icon}
+                    </div>
                     <div>
-                      <div className="text-xl text-black  font-bold">
+                      <div className="text-lg sm:text-xl lg:text-2xl text-black font-bold">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
+                      <div className="text-xs sm:text-sm lg:text-base text-gray-600">
+                        {stat.label}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -113,26 +124,52 @@ const AboutUsPage = () => {
 
       {/* Mission & Vision */}
       <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl text-black font-bold mb-6">Our Mission</h2>
-            <p className="text-gray-600 mb-6">
-              To be the most competitive, efficient, and HSSE-compliant
-              transporter of petroleum products and dry cargo in East and
-              Central Africa, delivering exceptional value to clients while
-              ensuring sustainable growth for all stakeholders.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-3xl text-black font-bold mb-6">Our Vision</h2>
-            <p className="text-gray-600">
-              To revolutionize East African logistics through innovative
-              technology, unmatched reliability, and a safety-first culture that
-              sets industry standards for excellence.
-            </p>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+    {/* Mission */}
+    <div>
+      <h2 className="text-3xl text-black font-bold mb-6">Our Mission</h2>
+      <p className="text-gray-600 mb-6">
+        To be the most competitive, efficient, and HSSE-compliant transporter 
+        of petroleum products and dry cargo in East and Central Africa, 
+        delivering exceptional value to clients while ensuring sustainable 
+        growth for all stakeholders.
+      </p>
+    </div>
+
+    {/* Vision */}
+    <div>
+      <h2 className="text-3xl text-black font-bold mb-6">Our Vision</h2>
+      <p className="text-gray-600">
+        To revolutionize East African logistics through innovative 
+        technology, unmatched reliability, and a safety-first culture 
+        that sets industry standards for excellence.
+      </p>
+    </div>
+  </div>
+
+  {/* Core Values */}
+  <div className="max-w-7xl mx-auto px-4 mt-12">
+    <h2 className="text-3xl text-black font-bold mb-6 text-center">
+      Our Core Values
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {[
+        { title: "Safety First", description: "Ensuring the highest standards of health, safety, and environmental compliance in all operations." },
+        { title: "Integrity", description: "Conducting business with honesty, transparency, and ethical responsibility." },
+        { title: "Reliability", description: "Delivering consistent and dependable transport solutions for our clients." },
+        { title: "Customer Focus", description: "Prioritizing client satisfaction by providing efficient and tailored logistics solutions." },
+        { title: "Innovation", description: "Embracing technology and continuous improvement to optimize operations." },
+        { title: "Sustainability", description: "Promoting eco-friendly practices and sustainable growth for all stakeholders." },
+      ].map((value, index) => (
+        <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold text-orange-600 mb-3">{value.title}</h3>
+          <p className="text-gray-600">{value.description}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* Organizational Structure */}
       <div className="max-w-7xl mx-auto px-4 py-16">
