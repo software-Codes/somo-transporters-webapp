@@ -90,7 +90,7 @@ const AllServices = () => {
               <span className="text-orange-500">Logistics Solutions</span>
             </h1>
             <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-              Serving East Africa's transport needs since 2006 with safety,
+              Serving East Africas transport needs since 2006 with safety,
               efficiency, and cutting-edge technology
             </p>
           </div>
@@ -193,7 +193,7 @@ const AllServices = () => {
             Ready to Streamline Your Logistics?
           </h2>
           <p className="mb-8 text-lg">
-            Partner with East Africa's most reliable transport solution provider
+            Partner with East Africas most reliable transport solution provider
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/get-quote" >

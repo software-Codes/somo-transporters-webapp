@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { TruckImg, RealImg } from "@/assets/images/images";
+import { RealImg } from "@/assets/images/images";
 
 const HeroProfile = () => {
   return (
@@ -38,27 +38,23 @@ const HeroProfile = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href='/join-us'>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-lg rounded-full">
-              Join{""} us
-            </Button>
+            <Link href="/join-us">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 text-lg rounded-full">
+                Join{""} us
+              </Button>
             </Link>
 
-            <Link href='/get-quote'>
-            <Button
-              variant="outline"
-              className="bg-white hover:bg-gray-100 text-gray-800 px-8 py-6 text-lg rounded-full"
-            >
-              Book a delivery
-            </Button>
+            <Link href="/get-quote">
+              <Button
+                variant="outline"
+                className="bg-white hover:bg-gray-100 text-gray-800 px-8 py-6 text-lg rounded-full"
+              >
+                Book a delivery
+              </Button>
             </Link>
-
-
           </div>
         </div>
       </div>
-
-
     </div>
   );
 };

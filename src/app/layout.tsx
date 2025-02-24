@@ -49,40 +49,63 @@ const jakarta = localFont({
 });
 
 // Define interface for metadata params
-interface MetadataProps {
-  params: {
-    [key: string]: string | string[] | undefined;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+// interface MetadataProps {
+//   params: {
+//     [key: string]: string | string[] | undefined;
+//   };
+//   searchParams?: { [key: string]: string | string[] | undefined };
+// }
 
 // Generate metadata with dynamic title based on route
-export async function generateMetadata({ params, searchParams }: MetadataProps): Promise<Metadata> {
-  return {
-    title: {
-      template: '%s | Somo Distributors',
-      default: 'Somo Distributors',
-    },
-    description: "Your trusted distribution partner",
-    authors: [{ name: "Somo Distributors" }],
-    keywords: ["distribution", "somo", "business"],
-    metadataBase: new URL('https://your-domain.com'),
-    openGraph: {
-      title: 'Somo Distributors',
-      description: 'Your trusted distribution partner',
-      siteName: 'Somo Distributors',
-      locale: 'en_US',
-      type: 'website',
-    },
-    icons: [
-      {
-        url: '/favicon.ico',
-        sizes: 'any',
-      },
-    ],
-  };
-}
+// export async function generateMetadata({ params, searchParams }: MetadataProps): Promise<Metadata> {
+//   return {
+//     title: {
+//       template: '%s | Somo Distributors',
+//       default: 'Somo Distributors',
+//     },
+//     description: "Your trusted distribution partner",
+//     authors: [{ name: "Somo Distributors" }],
+//     keywords: ["distribution", "somo", "business"],
+//     metadataBase: new URL('https://your-domain.com'),
+//     openGraph: {
+//       title: 'Somo Distributors',
+//       description: 'Your trusted distribution partner',
+//       siteName: 'Somo Distributors',
+//       locale: 'en_US',
+//       type: 'website',
+//     },
+//     icons: [
+//       {
+//         url: '/favicon.ico',
+//         sizes: 'any',
+//       },
+//     ],
+//   };
+// }
 
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Somo Distributors',
+    default: 'Somo Distributors',
+  },
+  description: "Your trusted distribution partner",
+  authors: [{ name: "Somo Distributors" }],
+  keywords: ["distribution", "somo", "business"],
+  metadataBase: new URL('XXXXXXXXXXXXXXXXXXXXXXX'),
+  openGraph: {
+    title: 'Somo Distributors',
+    description: 'Your trusted distribution partner',
+    siteName: 'Somo Distributors',
+    locale: 'en_US',
+    type: 'website',
+  },
+  icons: [
+    {
+      url: '/favicon.ico',
+      sizes: 'any',
+    },
+  ],
+};
 export default function RootLayout({
   children,
 }: Readonly<{

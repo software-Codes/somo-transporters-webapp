@@ -37,7 +37,7 @@ const LpgTransport = () => {
         <section className="mb-12">
           <h2 className="text-2xl text-black md:text-3xl font-bold mb-6">Introduction</h2>
           <p className="text-gray-700 leading-relaxed">
-            As a key player in East Africa's energy logistics, Somo Transporters
+            As a key player in East Africas energy logistics, Somo Transporters
             provides specialized LPG transportation services since 2006. Our
             expertise in handling flammable gases ensures safe, reliable
             delivery while maintaining strict HSSE compliance and utilizing

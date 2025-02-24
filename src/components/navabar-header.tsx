@@ -1,5 +1,3 @@
-"use client";
-import { KobilImg } from "@/assets/images/client-slider/Slider";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";

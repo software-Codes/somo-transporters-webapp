@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Frontview, LadyImg, OurStory, TruckImg } from "@/assets/images/images";
+import { LadyImg, OurStory } from "@/assets/images/images";
 // import FooterInfo from "./FooterInfo";
 import {
   FaTachometerAlt,
@@ -64,7 +64,7 @@ const AboutUsPage = () => {
               About <span className="text-orange-500">Somo Transporters</span>
             </h1>
             <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-              East Africa's trusted logistics partner since 2006, delivering
+              East Africas trusted logistics partner since 2006, delivering
               excellence in petroleum and cargo transport
             </p>
           </div>
@@ -82,7 +82,7 @@ const AboutUsPage = () => {
               className="object-cover"
             />
           </div>
-          <div> 
+          <div>
             <h2 className="text-3xl text-black font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 mb-6">
               Established in 2006, Somo Transporters has grown from a local
@@ -98,7 +98,9 @@ const AboutUsPage = () => {
                   <div className="flex items-center gap-3">
                     <div className="text-orange-500">{stat.icon}</div>
                     <div>
-                      <div className="text-xl text-black  font-bold">{stat.value}</div>
+                      <div className="text-xl text-black  font-bold">
+                        {stat.value}
+                      </div>
                       <div className="text-sm text-gray-600">{stat.label}</div>
                     </div>
                   </div>

@@ -2,7 +2,6 @@ import {
   FleetImg,
   TrackingImg,
   MaintenanceImg,
-  SafetyImg,
   ClientsImg,
   EmergencyImg,
 } from "@/assets/images/images";
