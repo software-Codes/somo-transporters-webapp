@@ -15,3 +15,6 @@ export { default as TruckImg2 } from "./TruckImg2.jpg";
 export { default as TruckImg3 } from "./TruckImg3.jpg";
 export { default as TruckImg4 } from "./TruckImg4.jpg";
 export {default as ContactBgImg} from "./contactus.jpg";
+//with real images
+export {default as RealImg} from './real1.jpg';
+export {default as OurStory} from './Ourstory.jpeg';

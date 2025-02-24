@@ -1,4 +1,4 @@
-import { Frontview, HeroImage1, LadyImg } from "@/assets/images/images";
+import { Frontview, LadyImg, RealImg } from "@/assets/images/images";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -48,7 +48,7 @@ const AboutHomeComponent = () => {
               {/* Large image spanning full width */}
               <div className="col-span-2 h-64 md:h-72 overflow-hidden rounded-lg shadow-md">
                 <Image
-                  src={HeroImage1}
+                  src={RealImg}
                   alt="Container terminal with crane"
                   className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                 />

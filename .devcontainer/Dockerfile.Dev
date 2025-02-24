@@ -7,7 +7,7 @@ WORKDIR /workspace
 # Install development dependencies and tools
 RUN npm install -g nodemon vite
 
-# Install Docker using Docker's convenience script
+# Install Docker using Docker's convenience script  
 RUN apt-get update && \
     apt-get install -y \
     apt-transport-https \

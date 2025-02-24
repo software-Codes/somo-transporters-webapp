@@ -1,12 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import {
-  TruckImg1,
-  TruckImg2,
-  TruckImg3,
-  TruckImg4,
-} from "@/assets/images/images";
+
 import { FaShieldAlt, FaCoins, FaCogs, FaChartLine } from "react-icons/fa";
+import { TruckImg1 } from "@/assets/images/images";
 
 const VehicleCrew = () => {
   return (
@@ -22,7 +18,7 @@ const VehicleCrew = () => {
             </h2>
 
             <p className="text-lg text-gray-600">
-              Join East Africa's premier logistics network and access exclusive
+              Join East Africa&apos;s premier logistics network and access exclusive
               benefits:
             </p>
 

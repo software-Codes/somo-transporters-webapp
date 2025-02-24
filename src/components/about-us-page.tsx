@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Frontview, LadyImg, TruckImg } from "@/assets/images/images";
+import { Frontview, LadyImg, OurStory, TruckImg } from "@/assets/images/images";
 // import FooterInfo from "./FooterInfo";
 import {
   FaTachometerAlt,
@@ -74,9 +74,9 @@ const AboutUsPage = () => {
       {/* Our Story Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-96 rounded-xl overflow-hidden">
+          <div className="relative h-[500px]  rounded-xl overflow-hidden">
             <Image
-              src={Frontview}
+              src={OurStory}
               alt="Company history"
               fill
               className="object-cover"
