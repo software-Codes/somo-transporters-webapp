@@ -11,19 +11,11 @@ import {
   FaBriefcase,
   FaCommentDots,
 } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
-
-type ContactFormData = {
-  fullName: string;
-  email: string;
-  position: string;
-  phoneNumber: string;
-  message: string;
-};
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { ContactFormData, useContactForm } from "@/app/contact/useContactForm";
 
 const ContactUsMainComponent = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -34,57 +26,7 @@ const ContactUsMainComponent = () => {
     message: "",
   });
 
-  const [statusMessage, setStatusMessage] = useState<{
-    text: string;
-    isError: boolean;
-  }>({
-    text: "",
-    isError: false,
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Validate all fields
-    const missingFields = Object.entries(formData)
-      .filter(([_, value]) => !value)
-      .map(([key]) => key);
-
-    if (missingFields.length > 0) {
-      setStatusMessage({
-        text: `Please fill in all required fields: ${missingFields.join(", ")}`,
-        isError: true,
-      });
-      return;
-    }
-
-    try {
-      await emailjs.send(
-        "service_ak5633e",
-        "template_kjlgm0t",
-        formData,
-        "CIntmA5Pmdt-ViNny"
-      );
-
-      setStatusMessage({
-        text: "Message sent successfully!",
-        isError: false,
-      });
-      setFormData({
-        fullName: "",
-        email: "",
-        position: "",
-        phoneNumber: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      setStatusMessage({
-        text: "Failed to send message. Please try again.",
-        isError: true,
-      });
-    }
-  };
+  const { handleSubmit, statusMessage, loading } = useContactForm();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -93,6 +35,20 @@ const ContactUsMainComponent = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const success = await handleSubmit(formData);
+    if (success) {
+      setFormData({
+        fullName: "",
+        email: "",
+        position: "",
+        phoneNumber: "",
+        message: "",
+      });
+    }
   };
 
   return (
@@ -125,7 +81,6 @@ const ContactUsMainComponent = () => {
       {/* Contact Info Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {/* Address Card */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="flex items-center mb-4">
               <div className="bg-orange-100 p-3 rounded-full">
@@ -144,7 +99,6 @@ const ContactUsMainComponent = () => {
             </p>
           </div>
 
-          {/* Contact Card */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="flex items-center mb-4">
               <div className="bg-orange-100 p-3 rounded-full">
@@ -163,7 +117,6 @@ const ContactUsMainComponent = () => {
             </p>
           </div>
 
-          {/* Hours Card */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="flex items-center mb-4">
               <div className="bg-orange-100 p-3 rounded-full">
@@ -192,8 +145,7 @@ const ContactUsMainComponent = () => {
             <p className="text-gray-600">Fill the form below to talk to us</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Full Name */}
+          <form onSubmit={handleFormSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label
                 htmlFor="fullName"
@@ -208,11 +160,10 @@ const ContactUsMainComponent = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="pl-10"
+                required
               />
             </div>
 
-            {/* Email */}
             <div className="space-y-2">
               <Label
                 htmlFor="email"
@@ -228,11 +179,10 @@ const ContactUsMainComponent = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="john@company.com"
-                className="pl-10"
+                required
               />
             </div>
 
-            {/* Position & Phone Number */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label
@@ -248,7 +198,7 @@ const ContactUsMainComponent = () => {
                   value={formData.position}
                   onChange={handleChange}
                   placeholder="Manager"
-                  className="pl-10"
+                  required
                 />
               </div>
 
@@ -267,12 +217,11 @@ const ContactUsMainComponent = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="0722 455 678"
-                  className="pl-10"
+                  required
                 />
               </div>
             </div>
 
-            {/* Message */}
             <div className="space-y-2">
               <Label
                 htmlFor="message"
@@ -288,11 +237,10 @@ const ContactUsMainComponent = () => {
                 onChange={handleChange}
                 placeholder="Tell us what we can help you with"
                 rows={5}
-                className="pl-10"
+                required
               />
             </div>
 
-            {/* Status Message */}
             {statusMessage.text && (
               <p
                 className={`text-sm ${
@@ -306,8 +254,9 @@ const ContactUsMainComponent = () => {
             <Button
               type="submit"
               className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+              disabled={loading}
             >
-              Send Message
+              {loading ? "SENDING..." : "SEND MESSAGE"}
             </Button>
           </form>
         </div>
