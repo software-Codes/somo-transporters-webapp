@@ -1,0 +1,29 @@
+{
+    "name": "somo-transporters-web-prototype",
+    "dockerFile": "Dockerfile.Dev",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash"
+        },
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ms-azuretools.vscode-docker",
+          "eamodio.gitlens",
+          "GitHub.copilot"
+        ]
+      }
+    },
+    "postCreateCommand": "npm install",
+    "postStartCommand": "npm run dev",
+    "forwardPorts": [5173],
+    "runArgs": ["--privileged"],
+    "mounts": [
+      "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "remoteEnv": {
+      "DOCKER_HOST": "unix:///var/run/docker.sock"
+    },
+    "remoteUser": "node"
+  }
