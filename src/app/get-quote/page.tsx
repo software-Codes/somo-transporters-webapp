@@ -1,14 +1,17 @@
+import Footer from "@/components/footer";
+import GetQuotation from "@/components/get-quote";
 import NavbarHeader from "@/components/navabar-header";
 import React from "react";
 
 const GetQuotationPage = () => {
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen w-full bg-white">
       <NavbarHeader />
+      <main>
+        <GetQuotation />
 
-      <p className="text-3xl text-center mt-10 flex text-gray-400 justify-center" >
-        make quotationn here
-      </p>
+      </main>
+      <Footer />
     </div>
   );
 };

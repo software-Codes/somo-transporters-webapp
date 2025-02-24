@@ -81,6 +81,16 @@ const NavbarHeader = () => {
             >
               Join Us
             </Link>
+            <Link
+              href="/gallery"
+              className={`text-lg px-4 py-2 transition-colors ${
+                isActive("/join-us")
+                  ? "text-orange-600 font-medium"
+                  : "text-gray-800 hover:text-orange-600"
+              }`}
+            >
+            Gallery
+            </Link>
             <Link href="/get-quote">
               <Button className="text-lg px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-md">
                 Get Quote
