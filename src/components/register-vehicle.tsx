@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { FaShieldAlt, FaCoins, FaCogs, FaChartLine } from "react-icons/fa";
 import { TruckImg1 } from "@/assets/images/images";
+import Link from "next/link";
 
 const VehicleCrew = () => {
   return (
@@ -68,13 +69,15 @@ const VehicleCrew = () => {
               </div>
             </div>
 
-            <button
+<Link href='/join-us' >
+<button
               className="bg-orange-500 text-white px-8 py-3 rounded-full 
               hover:bg-orange-600 transition-colors font-semibold
               flex items-center gap-2 mt-6"
             >
               Join Our Fleet Network
             </button>
+</Link>
           </div>
 
           {/* Side Image */}

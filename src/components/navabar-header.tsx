@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { SomoLogo, SomoLogov1 } from "@/assets/images/images";
+import { NewLogo } from "@/assets/images/Gallery/gallery";
 
 const NavbarHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const NavbarHeader = () => {
             <Link href="/">
               <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-24 hover:scale-105 transition-transform">
                 <Image
-                  src={SomoLogov1}
+                  src={NewLogo}
                   alt="SOMO Logo"
                   fill
                   className="object-contain bg-orange-600 rounded-full hover:bg-orange-700 transition-colors"

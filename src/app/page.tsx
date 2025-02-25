@@ -10,6 +10,7 @@ import VehicleCrew from "@/components/register-vehicle";
 import ContactCTA from "@/components/contact-cta";
 import Footer from "@/components/footer";
 import FeaturedGallery from "@/components/gallery-featured";
+import AnimatedStats from "@/components/animated-stats";
 
 const Page = () => {
   return (
@@ -19,6 +20,7 @@ const Page = () => {
         {/* Your homepage content goes here */}
         <HeroProfile />
         <AboutHomeComponent />
+        <AnimatedStats />
         <WhyChooseUs />
         <ClientsSlider />
         <OurServices />

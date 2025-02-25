@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Mail } from "lucide-react";
-import { SomoLogov1 } from "@/assets/images/images";
+import { NewLogo } from "@/assets/images/Gallery/gallery";
 
 const Footer = () => {
   const socialIcons = {
@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="block w-48">
               <Image
-                src={SomoLogov1}
+                src={NewLogo}
                 alt="Somo Transporters"
                 width={180}
                 height={60}
