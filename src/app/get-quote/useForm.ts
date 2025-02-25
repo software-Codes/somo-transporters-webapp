@@ -30,10 +30,10 @@ export const useForm = () => {
       };
 
       await emailjs.send(
-        "service_ak5633e",
-        "template_kjlgm0t",
+        "service_9visxtk",
+        "template_kblcfqh",
         templateParams,
-        "CIntmA5Pmdt-ViNny"
+        "_7Hah3gS_dWhNdudF"
       );
 
       setStatusMessage({

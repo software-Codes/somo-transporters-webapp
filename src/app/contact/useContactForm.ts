@@ -2,7 +2,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
- export type ContactFormData = {
+export type ContactFormData = {
   fullName: string;
   email: string;
   position: string;
@@ -47,7 +47,7 @@ ${data.message}
     }
 
     setLoading(true);
-    
+
     try {
       const templateParams = {
         to_name: "Somo Transporters",
@@ -59,17 +59,17 @@ ${data.message}
       };
 
       await emailjs.send(
-        "service_ak5633e",
-        "template_kjlgm0t",
+        "service_9visxtk",
+        "template_kblcfqh",
         templateParams,
-        "CIntmA5Pmdt-ViNny"
+        "_7Hah3gS_dWhNdudF"
       );
 
       setStatusMessage({
         text: "Message sent successfully! We'll respond within 24 hours.",
         isError: false,
       });
-      
+
       return true; // Indicate success for form reset
     } catch (error) {
       console.error("EmailJS error:", error);

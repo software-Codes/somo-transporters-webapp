@@ -108,10 +108,10 @@ export const useContactForm = () => {
       };
 
       await emailjs.send(
-        "service_ak5633e",
-        "template_ul9tujh",
+        "service_9visxtk",
+        "template_kblcfqh",
         templateParams,
-        "CIntmA5Pmdt-ViNny"
+        "_7Hah3gS_dWhNdudF"
       );
 
       setStatusMessage({
