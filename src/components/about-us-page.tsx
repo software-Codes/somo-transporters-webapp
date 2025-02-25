@@ -157,7 +157,7 @@ const AboutUsPage = () => {
                     className="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm"
                   >
                     <span className="text-2xl">{region.icon}</span>
-                    <span className="font-medium">{region.name}</span>
+                    <span className="font-medium text-black ">{region.name}</span>
                   </div>
                 ))}
               </div>
@@ -169,7 +169,7 @@ const AboutUsPage = () => {
       {/* Achievements Section */}
       <div className="bg-gradient-to-br from-orange-50 to-orange-100 py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl text-black md:text-4xl font-bold text-center mb-12">
             Our Milestones
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
