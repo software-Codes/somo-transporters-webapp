@@ -115,3 +115,15 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* WhatsApp-like transitions */
+.bpw-message-list {
+  scroll-behavior: smooth;
+}
+
+.bpw-chat-bubble {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bpw-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

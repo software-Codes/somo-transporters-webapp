@@ -1,0 +1,32 @@
+/* Tailwind-inspired theme */
+.bpw-widget-btn {
+    @apply !bg-orange-500 !rounded-full !shadow-lg;
+    bottom: 2rem !important;
+    right: 2rem !important;
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  .bpw-header-container {
+    @apply !bg-gray-100 !border-b !border-gray-200;
+  }
+  
+  .bpw-chat-container {
+    @apply !rounded-xl !shadow-xl;
+  }
+  
+  .bpw-from-bot .bpw-chat-bubble {
+    @apply !bg-gray-100 !text-gray-800;
+  }
+  
+  .bpw-from-user .bpw-chat-bubble {
+    @apply !bg-orange-500 !text-white;
+  }
+  
+  .bpw-keyboard-single-choice {
+    @apply !gap-2;
+  }
+  
+  .bpw-button {
+    @apply !bg-orange-500 !text-white !rounded-lg !px-4 !py-2 hover:!bg-orange-600 transition-colors;
+  }
