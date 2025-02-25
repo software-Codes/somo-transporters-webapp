@@ -9,6 +9,7 @@ import {
   FaMapMarkedAlt,
 } from "react-icons/fa";
 import Footer from "./footer";
+import Link from "next/link";
 
 const AboutUsPage = () => {
   const structure = [
@@ -208,9 +209,12 @@ const AboutUsPage = () => {
               Join our growing list of satisfied clients including Mogas, City
               Oil, and Kobil Uganda
             </p>
+            <Link href="/contact" >
             <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
               Contact Our Team
             </button>
+            </Link>
+
           </div>
         </div>
       </div>

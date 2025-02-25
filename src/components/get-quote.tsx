@@ -96,7 +96,7 @@ const GetQuotation = () => {
     <div className="bg-white w-full">
       {/* Hero Section with Overlay */}
       <div className="relative w-full">
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
           <Image
             src={Frontview}
             alt="Somo Transporters operations"

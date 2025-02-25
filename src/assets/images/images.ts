@@ -18,3 +18,4 @@ export {default as ContactBgImg} from "./contactus.jpg";
 //with real images
 export {default as RealImg} from './real1.jpg';
 export {default as OurStory} from './Ourstory.jpeg';
+export {default as SomoLogov1} from './SomoLogoV1.jpg'

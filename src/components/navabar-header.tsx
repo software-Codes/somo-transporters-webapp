@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { SomoLogo } from "@/assets/images/images";
+import { SomoLogo, SomoLogov1 } from "@/assets/images/images";
 
 const NavbarHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,11 +21,11 @@ const NavbarHeader = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src={SomoLogo}
+              src={SomoLogov1}
               width={120}
               height={120}
               alt="logo"
-              className="mr-2"
+              className="mr-2  bg-orange-600 rounded-full "
             />
           </div>
 
