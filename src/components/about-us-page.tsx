@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { LadyImg, OurStory } from "@/assets/images/images";
+import { Frontview,  LadyImg,  OurStory } from "@/assets/images/images";
 // import FooterInfo from "./FooterInfo";
 import {
   FaTachometerAlt,
@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Footer from "./footer";
 import Link from "next/link";
+import { Gallery16 } from "@/assets/images/Gallery/gallery";
 
 const AboutUsPage = () => {
   const structure = [
@@ -48,9 +49,9 @@ const AboutUsPage = () => {
     <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="relative w-full">
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
+        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
           <Image
-            src={LadyImg}
+            src={Frontview}
             alt="Somo Transporters operations"
             fill
             priority
@@ -78,7 +79,7 @@ const AboutUsPage = () => {
           {/* Image Section */}
           <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] rounded-xl overflow-hidden">
             <Image
-              src={OurStory}
+              src={Gallery16}
               alt="Company history"
               fill
               className="object-cover"

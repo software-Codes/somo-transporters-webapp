@@ -9,6 +9,7 @@ import Impressed from "@/components/impressed";
 import VehicleCrew from "@/components/register-vehicle";
 import ContactCTA from "@/components/contact-cta";
 import Footer from "@/components/footer";
+import FeaturedGallery from "@/components/gallery-featured";
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
         <WhyChooseUs />
         <ClientsSlider />
         <OurServices />
+        <FeaturedGallery />
         <Impressed />
         <VehicleCrew />
         <ContactCTA />

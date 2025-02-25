@@ -7,8 +7,9 @@ import {
   CityOilImg,
   DonOilImg,
   HaredImg,
-  KobilImg,
   MogasImg,
+  RubisImg,
+  spRwandaImg,
   StabexImg,
 } from "@/assets/images/client-slider/Slider";
 
@@ -20,13 +21,14 @@ const ClientsSlider = () => {
   const controls = useAnimation();
 
   const clients = [
-    { img: KobilImg, alt: "Kobil" },
+    { img: RubisImg, alt: "Kobil" },
     { img: DonOilImg, alt: "Don Oil" },
     { img: MogasImg, alt: "Mogas" },
     { img: BanodaImg, alt: "Banoda Oil" },
     { img: StabexImg, alt: "Stabex International" },
     { img: CityOilImg, alt: "City Oil" },
     { img: HaredImg, alt: "Hared Petroleum" },
+    {img : spRwandaImg, alt: "SP Rwanda"}
   ];
 
   const triplicatedClients = [...clients, ...clients, ...clients];
