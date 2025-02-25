@@ -1,14 +1,20 @@
-import React from 'react'
+import Footer from "@/components/footer";
+import JoinUsComponent from "@/components/join-us-page";
+import NavbarHeader from "@/components/navabar-header";
+import React from "react";
 
 const JoinUs = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen w-full' >
-        <p className='text-2xl' >
-            this is the join us page
-        </p>    
-      
-    </div>
-  )
-}
+    <div className="flex flex-col min-h-screen w-full bg-white">
+      <NavbarHeader />
 
-export default JoinUs
+      <main>
+        <JoinUsComponent />
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default JoinUs;

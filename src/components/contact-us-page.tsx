@@ -134,12 +134,14 @@ const ContactUsMainComponent = () => {
           </div>
         </div>
       </div>
-            {/* Map Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
+      {/* Map Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
         <div className="rounded-2xl shadow-lg overflow-hidden">
-          <div className="relative pt-[56.25%]"> {/* 16:9 aspect ratio */}
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6806630845444!2d36.28888588400566!3d-0.47595059828015857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829a06fba388279%3A0x702934fd8bfbd5d8!2sLake%20Nakuru%20Flamingo%20Lodge!5e0!3m2!1sen!2ske!4v1740487672954!5m2!1sen!2ske" 
+          <div className="relative pt-[40.25%]">
+            {" "}
+            {/* 16:9 aspect ratio */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6806630845444!2d36.28888588400566!3d-0.47595059828015857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829a06fba388279%3A0x702934fd8bfbd5d8!2sLake%20Nakuru%20Flamingo%20Lodge!5e0!3m2!1sen!2ske!4v1740487672954!5m2!1sen!2ske"
               className="absolute top-0 left-0 w-full h-full border-0"
               allowFullScreen
               loading="lazy"
