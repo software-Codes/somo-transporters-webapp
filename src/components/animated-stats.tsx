@@ -15,7 +15,7 @@ const AnimatedStats = () => {
   const stats = [
     {
       icon: <FaTruck className="w-8 h-8" />,
-      value: 250,
+      value: 30,
       suffix: "+",
       label: "Trucks",
     },
@@ -27,13 +27,13 @@ const AnimatedStats = () => {
     },
     {
       icon: <FaCalendarAlt className="w-8 h-8" />,
-      value: 40,
+      value: 20,
       suffix: "+",
       label: "Years Experience",
     },
     {
       icon: <FaRoad className="w-8 h-8" />,
-      value: 1300000,
+      value: 200000,
       suffix: "+",
       label: "Trips Completed",
     },

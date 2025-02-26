@@ -25,7 +25,7 @@ const NavbarHeader = () => {
                   src={NewLogo}
                   alt="SOMO Logo"
                   fill
-                  className="object-contain bg-orange-600 rounded-full hover:bg-orange-700 transition-colors"
+                  className="object-contain bg-white rounded-full hover:bg-gray-300 transition-colors"
                   sizes="(max-width: 768px) 64px, (max-width: 1024px) 96px, 128px"
                 />
               </div>
