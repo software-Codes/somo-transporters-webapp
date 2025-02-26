@@ -20,13 +20,13 @@ const NavbarHeader = () => {
           {/* Logo - Responsive sizing */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <div className="relative w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 hover:scale-105 transition-transform">
+              <div className="relative w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-20 hover:scale-105 transition-transform">
                 <Image
                   src={NewLogo}
                   alt="SOMO Logo"
                   fill
                   className="object-contain bg-white rounded-full hover:bg-gray-100 transition-colors"
-                  sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 80px"
+                  sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 100px"
                 />
               </div>
             </Link>

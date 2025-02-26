@@ -9,10 +9,12 @@ import {
   spRwandaImg,
   StabexImg,
   OneGasImg,
-  UnocImg,
+  NestaImg,
+  OnePetroleumImg,
   Gazprom,
   AfricaOilImg,
 } from "@/assets/images/client-slider/Slider";
+import { AxonEnergyImg, MeruGroupImg } from "@/assets/images/images";
 
 const ClientsSlider = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,10 +30,13 @@ const ClientsSlider = () => {
     { img: CityOilImg, alt: "City Oil" },
     { img: spRwandaImg, alt: "SP Rwanda" },
     { img: OneGasImg, alt: "One Gas" },
-    { img: UnocImg, alt: "UNOC" },
 
     { img: Gazprom, alt: "Gazprom" },
     { img: AfricaOilImg, alt: "Africa Oil" },
+    { img: MeruGroupImg, alt: "Meru Group" },
+    { img: AxonEnergyImg, alt: "Axon Energy" },
+    { img: NestaImg, alt: "Nesta" },
+    { img: OnePetroleumImg, alt: "One Petroleum" },
   ];
 
   const triplicatedClients = [...clients, ...clients, ...clients];

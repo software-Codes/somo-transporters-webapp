@@ -1,9 +1,11 @@
 import {
   FleetImg,
   TrackingImg,
-  MaintenanceImg,
+  About1,
   ClientsImg,
   EmergencyImg,
+  About2,
+  TruckFleet,
 } from "@/assets/images/images";
 import Image from "next/image";
 import React from "react";
@@ -20,7 +22,7 @@ const WhyChooseUs = () => {
                 WHY Make Deal With us
               </div>
               <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
-                  
+
                 <span className="text-orange-500 block mt-2">
                   Petroleum & Logistics Needs
                 </span>
@@ -91,12 +93,12 @@ const WhyChooseUs = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
-                  img: FleetImg,
+                  img: TruckFleet,
                   alt: "Modern truck fleet",
                   class: "md:col-span-2",
                 },
                 { img: TrackingImg, alt: "GPS tracking system" },
-                { img: MaintenanceImg, alt: "Vehicle maintenance" },
+                { img: About1, alt: "Vehicle maintenance" },
                 {
                   img: ClientsImg,
                   alt: "Client partnerships",

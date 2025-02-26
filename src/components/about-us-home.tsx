@@ -1,4 +1,4 @@
-import { Frontview, LadyImg, RealImg } from "@/assets/images/images";
+import {  LadyImg, RealImg, SomoBossImg, SomoLogo } from "@/assets/images/images";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +15,7 @@ const AboutHomeComponent = () => {
               ABOUT US
             </div>
             <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-4">
-              Redefining Efficiency in
+              Enhancing Efficiency in
               <span className="text-orange-500">Transport & Logistics</span>
             </h2>
 
@@ -64,7 +64,7 @@ const AboutHomeComponent = () => {
               </div>
               <div className="h-48 md:h-56 overflow-hidden rounded-lg shadow-md">
                 <Image
-                  src={Frontview}
+                  src={SomoBossImg}
                   alt="Container port at sunset"
                   className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                 />

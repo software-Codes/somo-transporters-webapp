@@ -11,7 +11,7 @@ const OurServices = () => {
             OUR SERVICES
           </button>
           <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-4">
-            Elevate Your Petroleum Transportation with{" "}
+          Transform Your Petroleum Transportation with{" "}
             <span className="text-orange-500">Our services</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">

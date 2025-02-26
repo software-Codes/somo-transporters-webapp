@@ -5,6 +5,7 @@ export { default as CityOilImg } from "./cityoil.jpg";
 export { default as RubisImg } from "./rubis.jpg";
 export { default as spRwandaImg } from "./spRwanda.jpg";
 export { default as OneGasImg } from "./Onegas.png";
-export { default as UnocImg } from "./unoc_logo.png";
 export { default as Gazprom } from "./Gazprom.png";
 export { default as AfricaOilImg } from "./AfricaOil.png";
+export {default as NestaImg } from './NestaImg.jpeg';
+export {default as OnePetroleumImg  } from './OnePetroleumImg.jpeg';

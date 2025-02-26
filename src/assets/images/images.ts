@@ -7,15 +7,23 @@ export { default as FleetImg } from "./modern-truck-fleet.jpg";
 export { default as TrackingImg } from "./gps-tracking-system.jpg";
 export { default as MaintenanceImg } from "./vehicle-maintenance.jpg";
 export { default as SafetyImg } from "./safety-inspection.jpg";
-export { default as ClientsImg } from "./client-partnerships.jpg";
+export { default as ClientsImg } from "./ClientPartnerships.jpeg";
 export { default as EmergencyImg } from "./emergency-response-team.jpg";
 export { default as ImpressedImg } from "./impressed.jpg";
 export { default as TruckImg1 } from "./TruckImg.jpg";
 export { default as TruckImg2 } from "./TruckImg2.jpg";
 export { default as TruckImg3 } from "./TruckImg3.jpg";
 export { default as TruckImg4 } from "./TruckImg4.jpg";
-export {default as ContactBgImg} from "./contactus.jpg";
+export { default as ContactBgImg } from "./contactus.jpg";
 //with real images
-export {default as RealImg} from './real1.jpg';
-export {default as OurStory} from './Ourstory.jpeg';
-export {default as SomoLogov1} from './SomoLogoV1.jpg'
+export { default as RealImg } from "./real1.jpg";
+export { default as OurStory } from "./Ourstory.jpeg";
+export { default as SomoLogov1 } from "./SomoLogoV1.jpg";
+export { default as BackgroundImg } from "./Background.jpg";
+export { default as About1 } from "./about1.jpg";
+export { default as About2 } from "./about2.jpg";
+export { default as MeruGroupImg } from "./MeruGroup.jpeg";
+export { default as AxonEnergyImg } from "./AxonEnergy.jpeg";
+export { default as nestaImg } from "./NestaImg.jpeg";
+export { default as SomoBossImg } from "./SomoBoss.jpeg";
+export { default as TruckFleet } from "./TruckFleet.jpg";

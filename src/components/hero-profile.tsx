@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Gallery11 } from "@/assets/images/Gallery/gallery";
+import { BackgroundImg } from "@/assets/images/images";
 
 const HeroProfile = () => {
   return (
@@ -12,7 +12,7 @@ const HeroProfile = () => {
         {/* Background Container with Image */}
         <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
-            src={Gallery11}
+            src={BackgroundImg}
             alt="Logistics containers and shipping yard"
             fill
             priority
@@ -33,7 +33,7 @@ const HeroProfile = () => {
 
             <p className="text-white text-base md:text-lg max-w-2xl mb-8">
               Seamless, secure, and cost-effective transportation solutions
-              across East Africa.
+              across  Africa.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ const HeroProfile = () => {
                 variant="outline"
                 className="bg-white hover:bg-gray-100 text-gray-800 px-8 py-6 text-lg rounded-full"
               >
-                Book a delivery
+                Get Personalized Quotation
               </Button>
             </Link>
           </div>

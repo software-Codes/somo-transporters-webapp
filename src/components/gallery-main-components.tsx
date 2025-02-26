@@ -21,8 +21,17 @@ import {
   Gallery17,
   Gallery18,
   Gallery19,
+  Gallery20,
+  Gallery21,
+  Gallery22,
+  Gallery23,
+  Gallery24,
+  Gallery25,
+  Gallery26,
+  Gallery27,
+  Gallery28,
+  Gallery29,
 } from "@/assets/images/Gallery/gallery";
-import { Frontview } from "@/assets/images/images";
 
 const GalleryMainComponent = () => {
   // State for the lightbox
@@ -49,6 +58,17 @@ const GalleryMainComponent = () => {
     { src: Gallery17, alt: "Somo Transporters operations" },
     { src: Gallery18, alt: "Somo Transporters operations" },
     { src: Gallery19, alt: "Somo Transporters operations" },
+    {src : Gallery20, alt: "Somo Transporters operations" },
+    {src : Gallery21, alt: "Somo Transporters operations" },
+    {src : Gallery22, alt: "Somo Transporters operations" },
+    {src : Gallery23, alt: "Somo Transporters operations" },
+    {src : Gallery24, alt: "Somo Transporters operations" },
+    {src : Gallery25, alt: "Somo Transporters operations" },
+    {src : Gallery26, alt: "Somo Transporters operations" },
+    {src : Gallery27, alt: "Somo Transporters operations" },
+    {src : Gallery28, alt: "Somo Transporters operations" },
+    {src : Gallery29, alt: "Somo Transporters operations" },
+    
   ];
 
   // Modal/lightbox functions

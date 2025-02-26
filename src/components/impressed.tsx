@@ -25,7 +25,7 @@ const Impressed = () => {
         {/* Text Content positioned over the image */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center lg:text-left">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Impressed With Our Services?
+            Want to Get Our Amazing Services?
           </h2>
           <Link href="/contact" >
           <Button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors" >

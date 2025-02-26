@@ -142,7 +142,7 @@ const AllServices = () => {
                 <div>
                   <h3 className="font-semibold text-black text-lg">Advanced Tracking</h3>
                   <p className="text-gray-600">
-                    GPS monitoring and Chui Tracking System integration
+                    GPS monitoring and Mix Telematics integration
                   </p>
                 </div>
               </div>
