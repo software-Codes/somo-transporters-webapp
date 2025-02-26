@@ -3,14 +3,15 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 import {
-  BanodaImg,
   CityOilImg,
-  DonOilImg,
-  HaredImg,
   MogasImg,
   RubisImg,
   spRwandaImg,
   StabexImg,
+  OneGasImg,
+  UnocImg,
+  Gazprom,
+  AfricaOilImg,
 } from "@/assets/images/client-slider/Slider";
 
 const ClientsSlider = () => {
@@ -22,13 +23,15 @@ const ClientsSlider = () => {
 
   const clients = [
     { img: RubisImg, alt: "Kobil" },
-    { img: DonOilImg, alt: "Don Oil" },
     { img: MogasImg, alt: "Mogas" },
-    { img: BanodaImg, alt: "Banoda Oil" },
     { img: StabexImg, alt: "Stabex International" },
     { img: CityOilImg, alt: "City Oil" },
-    { img: HaredImg, alt: "Hared Petroleum" },
-    {img : spRwandaImg, alt: "SP Rwanda"}
+    { img: spRwandaImg, alt: "SP Rwanda" },
+    { img: OneGasImg, alt: "One Gas" },
+    { img: UnocImg, alt: "UNOC" },
+
+    { img: Gazprom, alt: "Gazprom" },
+    { img: AfricaOilImg, alt: "Africa Oil" },
   ];
 
   const triplicatedClients = [...clients, ...clients, ...clients];
