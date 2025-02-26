@@ -54,7 +54,7 @@ const ContactUsMainComponent = () => {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[750px] relative">
           <Image
             src={Frontview}
@@ -76,7 +76,7 @@ const ContactUsMainComponent = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Contact Info Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

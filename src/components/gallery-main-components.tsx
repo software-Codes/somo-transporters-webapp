@@ -82,7 +82,7 @@ const GalleryMainComponent = () => {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[750px] relative">
           <Image
             src={Frontview}
@@ -105,7 +105,7 @@ const GalleryMainComponent = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Gallery Section */}
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">

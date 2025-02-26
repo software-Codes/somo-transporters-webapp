@@ -69,9 +69,9 @@ const AllServices = () => {
   // ];
 
   return (
-    <div className="w-full bg-white pt-16">
+    <div className="w-full bg-white">
       {/* Hero Section */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
             src={LadyImg}
@@ -95,7 +95,7 @@ const AllServices = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 py-16">

@@ -51,7 +51,7 @@ const JoinUsComponent = () => {
   return (
     <div className="bg-white w-full">
       {/* Hero Section */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[600px] relative">
           <Image
             src={Frontview}
@@ -74,7 +74,7 @@ const JoinUsComponent = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Benefits Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">

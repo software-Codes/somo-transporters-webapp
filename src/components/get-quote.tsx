@@ -95,7 +95,7 @@ const GetQuotation = () => {
   return (
     <div className="bg-white w-full">
       {/* Hero Section with Overlay */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
           <Image
             src={Frontview}
@@ -130,7 +130,7 @@ const GetQuotation = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Quote Request Form Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">

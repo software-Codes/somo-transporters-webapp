@@ -1,18 +1,10 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { Frontview, LadyImg } from "@/assets/images/images";
-import {
-  FaTachometerAlt,
-  FaShieldAlt,
-  FaUsers,
-  FaMapMarkedAlt,
-  FaGlobeAfrica,
-  FaFileDownload,
-} from "react-icons/fa";
+import { FaTachometerAlt, FaShieldAlt, FaUsers, FaMapMarkedAlt, FaGlobeAfrica, FaFileDownload } from "react-icons/fa";
 import Footer from "./footer";
 import Link from "next/link";
 import { Gallery16 } from "@/assets/images/Gallery/gallery";
+import Image from "next/image";
 
 const AboutUsPage = () => {
   const handleDownload = () => {
@@ -67,59 +59,25 @@ const AboutUsPage = () => {
     { name: "South Sudan", icon: "🇸🇸" },
     { name: "Tanzania", icon: "🇹🇿" },
     { name: "Rwanda", icon: "🇷🇼" },
+    { name: "DRC Congo", icon: "🇨🇩" },
   ];
 
   return (
     <div className="w-full bg-white">
-      {/* Hero Section with Download Buttons */}
-      <div className="relative w-full">
-        <div className="w-full h-[500px] sm:h-[600px] md:h-[700px] relative">
-          <Image
-            src={Frontview}
-            alt="Somo Transporters operations"
-            fill
-            priority
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+      {/* Floating Download Button */}
+      <button
+        onClick={handleDownload}
+        className="fixed bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 group z-50"
+        aria-label="Download company profile"
+      >
+        <FaFileDownload className="w-6 h-6" />
+        <span className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+          Download Profile
+        </span>
+      </button>
 
-          {/* Floating Download Button */}
-          <button
-            onClick={handleDownload}
-            className="absolute bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 group"
-            aria-label="Download company profile"
-          >
-            <FaFileDownload className="w-6 h-6" />
-            <span className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-              Download Profile
-            </span>
-          </button>
-        </div>
-
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-16">
-          <div className="flex flex-col items-center space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-xl">
-              About <span className="text-orange-500">Somo Transporters</span>
-            </h1>
-            <p className="text-white text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-light leading-relaxed">
-              East Africa's premier logistics partner since 2006, delivering
-              excellence in petroleum and cargo transport across 5 nations
-            </p>
-
-            {/* Primary Download Button */}
-            <button
-              onClick={handleDownload}
-              className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-300 shadow-md"
-            >
-              <FaFileDownload className="w-5 h-5" />
-              <span>Download Company Profile (PDF)</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Our Story Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      {/* Our Story Section - Now the first content section */}
+      <div className="max-w-7xl mx-auto px-4 py-16 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image
@@ -131,18 +89,24 @@ const AboutUsPage = () => {
           </div>
 
           <div className="space-y-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-black font-bold">
-              Our Journey
-            </h2>
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              About <span className="text-orange-500">Somo Transporters</span>
+            </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
               Founded in 2006 as a local Kenyan operator, Somo Transporters has
               evolved into a regional logistics powerhouse. Our strategic
               expansion now covers key routes across{" "}
               <strong>Uganda, Kenya, South Sudan, Tanzania, and Rwanda</strong>.
-              From humble beginnings with a single truck, we've grown to manage
-              a fleet of 50+ specialized vehicles, serving Fortune 500 companies
-              and local enterprises alike.
             </p>
+
+            {/* Primary Download Button */}
+            <button
+              onClick={handleDownload}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-300 shadow-md w-full sm:w-auto justify-center"
+            >
+              <FaFileDownload className="w-5 h-5" />
+              <span>Download Company Profile (PDF)</span>
+            </button>
 
             {/* Regions Coverage */}
             <div className="bg-orange-50 p-6 rounded-xl">
@@ -157,7 +121,7 @@ const AboutUsPage = () => {
                     className="flex items-center gap-2 bg-white p-3 rounded-lg shadow-sm"
                   >
                     <span className="text-2xl">{region.icon}</span>
-                    <span className="font-medium text-black ">{region.name}</span>
+                    <span className="font-medium text-black">{region.name}</span>
                   </div>
                 ))}
               </div>
@@ -284,32 +248,7 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="relative h-[400px] md:h-[500px]">
-        <Image
-          src={LadyImg}
-          alt="Transport solutions"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60 flex items-center">
-          <div className="max-w-4xl mx-auto px-4 text-center text-white space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Partner with Africa's Logistics Leader
-            </h2>
-            <p className="text-lg md:text-xl font-light max-w-2xl mx-auto">
-              Join industry leaders like Kobil, TotalEnergies, and Stabex
-              International in trusting your logistics needs to our expert team
-            </p>
-            <Link href="/contact">
-              <button className="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-colors text-lg font-semibold shadow-lg">
-                Schedule Consultation
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
+      {/* Footer */}
       <Footer />
     </div>
   );

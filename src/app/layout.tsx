@@ -90,13 +90,25 @@ export const metadata: Metadata = {
   },
   description: "Your trusted distribution partner",
   authors: [{ name: "Somo Distributors" }],
-  keywords: ["distribution", "somo", "business"],
+  keywords: ["distribution", "somo", "business", "logistics", "cargo"],
   openGraph: {
     title: 'Somo Distributors',
     description: 'Your trusted distribution partner',
     siteName: 'Somo Distributors',
     locale: 'en_US',
     type: 'website',
+    url: 'https://your-domain.com', // Update with your actual domain
+    images: [
+      {
+        url: '/og-image.jpg', // Ensure you have an Open Graph image
+        width: 1200,
+        height: 630,
+        alt: 'Somo Distributors',
+      },
+    ],
+  },
+  facebook  : {
+    appId: '1234567890', // Update with your actual Facebook App ID
   },
   icons: [
     {
@@ -105,6 +117,7 @@ export const metadata: Metadata = {
     },
   ],
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
