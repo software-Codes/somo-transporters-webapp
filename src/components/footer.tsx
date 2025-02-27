@@ -106,7 +106,7 @@ const Footer = () => {
                   href="/get-quote"
                   className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
                 >
-                  Get a Quote
+                  Get personalized quotation
                 </Link>
               </li>
               <li>
@@ -114,7 +114,7 @@ const Footer = () => {
                   href="/join-us"
                   className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
                 >
-                  Register as a Driver
+                  Join us 
                 </Link>
               </li>
             </ul>
@@ -154,7 +154,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-600 text-sm">
-              © 2024 Somo Transporters. All rights reserved.
+              © 2025 Somo Transporters. All rights reserved.
             </p>
             <div className="flex space-x-6">
               {["Privacy Policy", "Terms & Conditions"].map((item) => (
