@@ -9,7 +9,7 @@ const ServicesPage = () => {
 
       {/* Hero Section */}
       <main>
-        <AllServices />
+        <AllServices/>
       </main>
       
     </div>

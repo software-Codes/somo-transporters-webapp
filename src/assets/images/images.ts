@@ -27,3 +27,4 @@ export { default as AxonEnergyImg } from "./AxonEnergy.jpeg";
 export { default as nestaImg } from "./NestaImg.jpeg";
 export { default as SomoBossImg } from "./SomoBoss.jpeg";
 export { default as TruckFleet } from "./TruckFleet.jpg";
+export {default as FinalImgeBg } from './FinalImgeBg.jpg';
