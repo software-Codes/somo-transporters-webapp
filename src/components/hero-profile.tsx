@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { BackgroundImg } from "@/assets/images/images";
+import { FinalImgeBg } from "@/assets/images/images";
 
 const HeroProfile = () => {
   return (
@@ -12,7 +12,7 @@ const HeroProfile = () => {
         {/* Background Container with Image */}
         <div className="w-full h-[500px] sm:h-[600px] md:h-[500px] relative">
           <Image
-            src={BackgroundImg}
+            src={FinalImgeBg}
             alt="Logistics containers and shipping yard"
             fill
             priority

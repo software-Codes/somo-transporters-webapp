@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap:  https://somotransporters.co.ke/sitemap.xml
+Sitemap:  https://somotransporters.co.ke/sitemap.xml    
