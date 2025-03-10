@@ -100,7 +100,7 @@ description: 'LET IT FLOW ALL THE WAY | SAFETY FIRST',
     url: 'https://www.somotransporters.co.ke/', // Update with your actual domain
   },
   facebook  : {
-    appId: 'https://www.facebook.com/share/18QsQoidbb/?mibextid=qi2Omg', // Update with your actual Facebook App ID
+    appId: '18QsQoidbb', // Update with your actual Facebook App ID
   },
   icons: [
     {
