@@ -9,3 +9,4 @@ export { default as Gazprom } from "./Gazprom.png";
 export { default as AfricaOilImg } from "./AfricaOil.png";
 export {default as NestaImg } from './NestaImg.jpeg';
 export {default as OnePetroleumImg  } from './OnePetroleumImg.jpeg';
+export {default as OryxImg  } from './oryx.jpg';

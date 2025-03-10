@@ -5,26 +5,18 @@ import Footer from "./footer";
 import Link from "next/link";
 import { Gallery16 } from "@/assets/images/Gallery/gallery";
 import Image from "next/image";
+import LeadershipStructure from "./LeadershipStructure";
 
 const AboutUsPage = () => {
   const handleDownload = () => {
     // Create a temporary anchor element
     const link = document.createElement("a");
-    link.href = "/documents/SOMO-TRANSPORTERS-COMPANY-PROFILE.pdf";
-    link.download = "SOMO-TRANSPORTERS-COMPANY-PROFILE.pdf";
+    link.href = "/documents/Somo transporters profile.pdf";
+    link.download = "Somo transporters profile.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-
-  const structure = [
-    { role: "Managing Director", team: "Executive Leadership" },
-    { role: "Operations Manager", team: "Operations Team" },
-    { role: "Safety Manager", team: "HSSE Department" },
-    { role: "Finance Manager", team: "Finance Team" },
-    { role: "Chief Mechanic", team: "Technical Team" },
-    { role: "Chief Driver", team: "Logistics Team" },
-  ];
 
   const stats = [
     {
@@ -114,7 +106,7 @@ const AboutUsPage = () => {
                 <FaGlobeAfrica className="text-orange-600" />
                 Regional Coverage
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                 {regions.map((region, index) => (
                   <div
                     key={index}
@@ -228,25 +220,8 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* Organizational Structure */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl text-black font-bold mb-12 text-center">
-          Leadership Structure
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {structure.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500"
-            >
-              <h3 className="text-xl font-bold mb-2 text-gray-800">
-                {item.role}
-              </h3>
-              <p className="text-gray-600">{item.team}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Leadership Structure - REPLACED the old section with the new component */}
+      <LeadershipStructure />
 
       {/* Footer */}
       <Footer />

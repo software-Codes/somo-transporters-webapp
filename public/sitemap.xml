@@ -2,7 +2,7 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <!-- Home Page -->
         <url>
-            <loc>https://somotransporters.co.ke//</loc>
+            <loc>https://somotransporters.co.ke/</loc>
             <lastmod>2025-02-27</lastmod>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
@@ -12,7 +12,7 @@
         <url>
             <loc>https://somotransporters.co.ke/about</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.8</priority>
         </url>
 
@@ -20,7 +20,7 @@
         <url>
             <loc>https://somotransporters.co.ke/services</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.8</priority>
         </url>
 
@@ -28,7 +28,7 @@
         <url>
             <loc>https://somotransporters.co.ke/contact</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.7</priority>
         </url>
 
@@ -36,7 +36,7 @@
         <url>
             <loc>https://somotransporters.co.ke/join-us</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.7</priority>
         </url>
 
@@ -44,7 +44,7 @@
         <url>
             <loc>https://somotransporters.co.ke/gallery</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.7</priority>
         </url>
 
@@ -52,7 +52,7 @@
         <url>
             <loc> https://somotransporters.co.ke/get-quote</loc>
             <lastmod>2025-02-27</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.9</priority>
         </url>
     </urlset>

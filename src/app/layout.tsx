@@ -85,30 +85,22 @@ const jakarta = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Somo Distributors',
-    default: 'Somo Distributors',
+    template: '%s | Somo Transporters Ltd ',
+    default: 'Somo Transporters Ltd ',
   },
   description: "Your trusted distribution partner",
   authors: [{ name: "Somo Distributors" }],
   keywords: ["distribution", "somo", "business", "logistics", "cargo"],
   openGraph: {
-    title: 'Somo Distributors',
-    description: 'Your trusted distribution partner',
-    siteName: 'Somo Distributors',
-    locale: 'en_US',
+    title: 'Somo Transporters Ltd ',
+description: 'LET IT FLOW ALL THE WAY | SAFETY FIRST',
+    siteName: 'Somo Transporters Ltd ',
+    locale: 'en_ke',
     type: 'website',
-    url: 'https://your-domain.com', // Update with your actual domain
-    images: [
-      {
-        url: '/og-image.jpg', // Ensure you have an Open Graph image
-        width: 1200,
-        height: 630,
-        alt: 'Somo Distributors',
-      },
-    ],
+    url: 'https://www.somotransporters.co.ke/', // Update with your actual domain
   },
   facebook  : {
-    appId: '1234567890', // Update with your actual Facebook App ID
+    appId: 'https://www.facebook.com/share/18QsQoidbb/?mibextid=qi2Omg', // Update with your actual Facebook App ID
   },
   icons: [
     {

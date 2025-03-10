@@ -13,6 +13,7 @@ import {
   OnePetroleumImg,
   Gazprom,
   AfricaOilImg,
+  OryxImg,
 } from "@/assets/images/client-slider/Slider";
 import { AxonEnergyImg, MeruGroupImg } from "@/assets/images/images";
 
@@ -37,6 +38,7 @@ const ClientsSlider = () => {
     { img: AxonEnergyImg, alt: "Axon Energy" },
     { img: NestaImg, alt: "Nesta" },
     { img: OnePetroleumImg, alt: "One Petroleum" },
+    {img: OryxImg, alt: "Oryx Energy"},
   ];
 
   const triplicatedClients = [...clients, ...clients, ...clients];
