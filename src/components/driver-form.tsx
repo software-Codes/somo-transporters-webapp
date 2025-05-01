@@ -46,7 +46,7 @@ const driverFormSchema = z.object({
   availability: z.string().min(1, "Please select your availability"),
   message: z.string().optional(),
 });
-
+  
 type DriverFormData = z.infer<typeof driverFormSchema>;
 
 export const DriverForm = () => {
