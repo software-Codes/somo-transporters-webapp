@@ -23,6 +23,7 @@ const ContactUsMainComponent = () => {
     position: "",
     phoneNumber: "",
     message: "",
+    _honeypot: "",
   });
 
   const { handleSubmit, statusMessage, loading } = useContactForm();
@@ -37,7 +38,7 @@ const ContactUsMainComponent = () => {
     e.preventDefault();
     const success = await handleSubmit(formData);
     if (success) {
-      setFormData({ fullName: "", email: "", position: "", phoneNumber: "", message: "" });
+      setFormData({ fullName: "", email: "", position: "", phoneNumber: "", message: "", _honeypot: "" });
     }
   };
 
@@ -124,6 +125,17 @@ const ContactUsMainComponent = () => {
             </div>
 
             <form onSubmit={handleFormSubmit} className="space-y-6">
+              {/* Honeypot — hidden from real users, catches bots */}
+              <input
+                type="text"
+                name="_honeypot"
+                value={formData._honeypot}
+                onChange={handleChange}
+                aria-hidden="true"
+                tabIndex={-1}
+                className="hidden"
+                autoComplete="off"
+              />
               <div className="space-y-2">
                 <Label htmlFor="fullName" className="flex items-center gap-2">
                   <FaUser className="text-primary" />

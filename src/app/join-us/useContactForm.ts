@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+const COOLDOWN_MS = 60_000;
 
 export type DriverContactFormData = {
   fullName: string;
@@ -11,119 +16,95 @@ export type DriverContactFormData = {
   availability?: string;
   position?: string;
   message: string;
+  _honeypot?: string;
 };
 
 export const useContactForm = () => {
-  const [statusMessage, setStatusMessage] = useState<{
-    text: string;
-    isError: boolean;
-  }>({ text: "", isError: false });
+  const [statusMessage, setStatusMessage] = useState<{ text: string; isError: boolean }>({
+    text: "",
+    isError: false,
+  });
   const [loading, setLoading] = useState(false);
-  const formatContactMessage = (data: DriverContactFormData) => {
-    return `DRIVER APPLICATION SUBMISSION DETAILS:
-  
-  CONTACT INFORMATION:
-  - Name: ${data.fullName}
-  - Email: ${data.email}
-  - Phone: ${data.phoneNumber}
-  - Position: ${data.position || "Driver Applicant"}
-  
-  DRIVER DETAILS:
-  - License Number: ${data.licenseNumber || "Not provided"}
-  - Experience: ${data.experienceYears || "Not provided"} years
-  - Vehicle Type: ${data.vehicleType || "Not provided"}
-  - Availability: ${data.availability || "Not provided"}
-  
-  MESSAGE:
-  ${data.message}`;
-  };
+  const lastSubmitTime = useRef<number>(0);
+
+  const formatContactMessage = (data: DriverContactFormData) => `
+DRIVER APPLICATION:
+
+CONTACT:
+- Name: ${data.fullName}
+- Email: ${data.email}
+- Phone: ${data.phoneNumber}
+- Position: ${data.position || "Driver Applicant"}
+
+DRIVER DETAILS:
+- License: ${data.licenseNumber || "Not provided"}
+- Experience: ${data.experienceYears || "Not provided"} years
+- Vehicle Type: ${data.vehicleType || "Not provided"}
+- Availability: ${data.availability || "Not provided"}
+
+MESSAGE:
+${data.message}
+`;
 
   const handleSubmit = async (formData: DriverContactFormData) => {
-    // Required fields validation
-    const requiredFields = ["fullName", "email", "phoneNumber"];
-    const missingFields = requiredFields
-      .filter((field) => !formData[field as keyof DriverContactFormData])
-      .map((field) => field);
+    // Honeypot check
+    if (formData._honeypot) return false;
 
-    // Driver-specific field validation (optional but recommended)
-    const driverFields = [
-      "licenseNumber",
-      "experienceYears",
-      "vehicleType",
-      "availability",
-    ];
-    const recommendedFields = driverFields
-      .filter((field) => !formData[field as keyof DriverContactFormData])
-      .map((field) => field);
-
-    if (missingFields.length > 0) {
+    // Rate limiting
+    const now = Date.now();
+    const elapsed = now - lastSubmitTime.current;
+    if (lastSubmitTime.current && elapsed < COOLDOWN_MS) {
+      const remaining = Math.ceil((COOLDOWN_MS - elapsed) / 1000);
       setStatusMessage({
-        text: `Please fill in all required fields: ${missingFields.join(", ")}`,
+        text: `Please wait ${remaining} seconds before submitting again.`,
         isError: true,
       });
       return false;
     }
 
-    if (recommendedFields.length > 0) {
-      // Warning but not blocking submission
-      console.warn(
-        `Some recommended fields are missing: ${recommendedFields.join(", ")}`
-      );
-    }
-
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setStatusMessage({
-        text: "Please enter a valid email address",
-        isError: true,
-      });
+      setStatusMessage({ text: "Please enter a valid email address.", isError: true });
       return false;
     }
 
-    // Phone number validation (basic)
     const phoneRegex = /^[+\d\s()-]{7,20}$/;
     if (!phoneRegex.test(formData.phoneNumber)) {
-      setStatusMessage({
-        text: "Please enter a valid phone number",
-        isError: true,
-      });
+      setStatusMessage({ text: "Please enter a valid phone number.", isError: true });
       return false;
     }
 
     setLoading(true);
 
     try {
-      const templateParams = {
-        to_name: "Somo Transporters",
-        from_name: formData.fullName,
-        message: formatContactMessage(formData),
-        reply_to: formData.email,
-        phone: formData.phoneNumber,
-        position: formData.position || "Driver Applicant",
-        license: formData.licenseNumber || "Not provided",
-        experience: formData.experienceYears || "Not provided",
-        vehicle_type: formData.vehicleType || "Not provided",
-        availability: formData.availability || "Not provided",
-      };
-
       await emailjs.send(
-        "service_b80f8da",
-        "template_j36rv33",
-        templateParams,
-        "Xpygen7v6OZ70A8VH"
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          to_name: "Somo Transporters",
+          from_name: formData.fullName,
+          message: formatContactMessage(formData),
+          reply_to: formData.email,
+          phone: formData.phoneNumber,
+          position: formData.position || "Driver Applicant",
+          license: formData.licenseNumber || "Not provided",
+          experience: formData.experienceYears || "Not provided",
+          vehicle_type: formData.vehicleType || "Not provided",
+          availability: formData.availability || "Not provided",
+        },
+        PUBLIC_KEY
       );
 
+      lastSubmitTime.current = Date.now();
       setStatusMessage({
-        text: "Application submitted successfully! We'll review your information and contact you within 24-48 hours.",
+        text: "Application submitted! We'll review and contact you within 24–48 hours.",
         isError: false,
       });
-
-      return true; // Indicate success for form reset
+      return true;
     } catch (error) {
       console.error("EmailJS error:", error);
       setStatusMessage({
-        text: "Failed to submit application. Please try again or contact us directly at careers@somotransporters.com",
+        text: "Failed to submit. Please try again or contact us directly.",
         isError: true,
       });
       return false;
@@ -132,9 +113,7 @@ export const useContactForm = () => {
     }
   };
 
-  const resetStatus = () => {
-    setStatusMessage({ text: "", isError: false });
-  };
+  const resetStatus = () => setStatusMessage({ text: "", isError: false });
 
   return { handleSubmit, statusMessage, loading, resetStatus };
 };
