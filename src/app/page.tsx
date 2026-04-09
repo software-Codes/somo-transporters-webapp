@@ -14,7 +14,7 @@ import AnimatedStats from "@/components/animated-stats";
 
 const Page = () => {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-white">
+    <div className="flex flex-col min-h-screen w-full bg-background">
       <NavbarHeader />
       <main className="">
         {/* Your homepage content goes here */}
