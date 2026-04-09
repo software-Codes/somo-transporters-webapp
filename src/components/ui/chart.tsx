@@ -76,20 +76,32 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
     return null
   }
 
+  // Sanitize id — only allow alphanumeric, hyphens and underscores
+  const safeId = id.replace(/[^a-zA-Z0-9_-]/g, "")
+
+  // Sanitize a CSS color value — only allow safe characters used in valid CSS colors
+  // (hex, rgb/hsl functions, named colors, percentages, spaces, commas, dots, slashes)
+  const sanitizeColor = (value: string): string =>
+    /^[a-zA-Z0-9#(),%./ -]+$/.test(value) ? value : ""
+
   return (
     <style
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
             ([theme, prefix]) => `
-${prefix} [data-chart=${id}] {
+${prefix} [data-chart=${safeId}] {
 ${colorConfig
   .map(([key, itemConfig]) => {
-    const color =
+    const rawColor =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color
-    return color ? `  --color-${key}: ${color};` : null
+    const color = rawColor ? sanitizeColor(rawColor) : null
+    // Sanitize key — only allow alphanumeric and hyphens
+    const safeKey = key.replace(/[^a-zA-Z0-9-]/g, "")
+    return color ? `  --color-${safeKey}: ${color};` : null
   })
+  .filter(Boolean)
   .join("\n")}
 }
 `
