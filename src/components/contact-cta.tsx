@@ -51,7 +51,7 @@ const ContactCTA = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto">
               {contactCards.map((card, index) => (
-                <Card key={index} className="bg-white/95 backdrop-blur hover:shadow-xl transition-all duration-300">
+                <Card key={index} className="bg-background/95 backdrop-blur hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="mx-auto mb-4 w-fit">{card.icon}</div>
                     <h3 className="text-xl font-semibold text-card-foreground mb-2">

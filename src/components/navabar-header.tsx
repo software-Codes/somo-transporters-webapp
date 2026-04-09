@@ -14,6 +14,7 @@ import {
   SheetTitle,
 } from "./ui/sheet";
 import { Separator } from "./ui/separator";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -29,19 +30,20 @@ const NavbarHeader = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="w-full sticky top-0 left-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm z-50">
+    <header className="w-full sticky top-0 left-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
+
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <div className="relative w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-20 hover:scale-105 transition-transform">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 lg:w-20 lg:h-16 hover:scale-105 transition-transform">
                 <Image
                   src={NewLogo}
                   alt="SOMO Logo"
                   fill
-                  className="object-contain bg-white rounded-full hover:bg-gray-100 transition-colors"
-                  sizes="(max-width: 768px) 48px, (max-width: 1024px) 64px, 100px"
+                  className="object-contain rounded-full bg-white p-0.5"
+                  sizes="(max-width: 768px) 48px, (max-width: 1024px) 56px, 80px"
                 />
               </div>
             </Link>
@@ -62,15 +64,19 @@ const NavbarHeader = () => {
                 {link.label}
               </Link>
             ))}
-            <Link href="/get-quote">
-              <Button className="text-sm lg:text-base rounded-full shadow-md transform hover:scale-105 transition-all ml-2">
-                Request Quotation
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2 ml-2">
+              <ThemeToggle />
+              <Link href="/get-quote">
+                <Button className="text-sm lg:text-base rounded-full shadow-md hover:scale-105 transition-all">
+                  Request Quotation
+                </Button>
+              </Link>
+            </div>
           </nav>
 
-          {/* Mobile Menu */}
-          <div className="flex md:hidden">
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="flex md:hidden items-center gap-1">
+            <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -78,7 +84,7 @@ const NavbarHeader = () => {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-72">
+              <SheetContent side="right" className="w-72 bg-background">
                 <SheetTitle className="text-lg font-semibold text-primary">
                   Somo Transporters
                 </SheetTitle>
@@ -110,6 +116,7 @@ const NavbarHeader = () => {
               </SheetContent>
             </Sheet>
           </div>
+
         </div>
       </div>
     </header>

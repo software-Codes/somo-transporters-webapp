@@ -38,7 +38,7 @@ const HeroProfile = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                className="rounded-full px-8 py-5 text-sm sm:text-base bg-white hover:bg-gray-100 text-gray-800 w-full sm:w-auto"
+                className="rounded-full px-8 py-5 text-sm sm:text-base bg-background hover:bg-muted text-foreground w-full sm:w-auto"
               >
                 Get Personalized Quotation
               </Button>

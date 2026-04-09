@@ -114,8 +114,8 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           enableSystem
-          defaultTheme="system"
-          disableTransitionOnChange
+          defaultTheme="dark"
+          disableTransitionOnChange={false}
         >
           {children}
         </ThemeProvider>

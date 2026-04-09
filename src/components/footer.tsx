@@ -23,7 +23,7 @@ const Footer = () => {
                 alt="Somo Transporters"
                 width={180}
                 height={60}
-                className="w-auto h-12 bg-white rounded-full"
+                className="w-auto h-12 bg-background rounded-full"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
