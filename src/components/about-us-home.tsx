@@ -1,51 +1,50 @@
-import {  LadyImg, RealImg, SomoBossImg, SomoLogo } from "@/assets/images/images";
+import { LadyImg, RealImg, SomoBossImg } from "@/assets/images/images";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 const AboutHomeComponent = () => {
   return (
     <div className="w-full px-4 py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto">
-        {/* Image and Text Container */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Text Content - First on all screen sizes */}
+          {/* Text Content */}
           <div className="lg:w-1/2">
-            <div className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full font-medium text-sm mb-4">
+            <Badge variant="secondary" className="mb-4 text-sm font-medium">
               ABOUT US
-            </div>
-            <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-4">
-              Enhancing Efficiency in
-              <span className="text-orange-500">Transport & Logistics</span>
+            </Badge>
+            <h2 className="text-3xl text-foreground md:text-4xl lg:text-5xl font-bold mb-4">
+              Enhancing Efficiency in{" "}
+              <span className="text-primary">Transport & Logistics</span>
             </h2>
-
-            <p className="text-gray-700 mb-8">
+            <p className="text-muted-foreground mb-8">
               At Somo Transporters, we are dedicated to providing top-notch
-              Logistics transportation , We specialize in all areas of
+              Logistics transportation. We specialize in all areas of
               transportation and logistics. Somo Transporters provides
               customized solutions using the most advanced technologies and our
               expertise lies on an in-house, built-in efficient IT system, a
               reactive and reliable international network and a close
-              relationship with the major operators in the logistics industry
+              relationship with the major operators in the logistics industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8 lg:mb-0">
               <Link href="/get-quote">
-                <button className="w-full sm:w-auto px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors">
+                <Button className="w-full sm:w-auto rounded-lg">
                   Get a quote
-                </button>
+                </Button>
               </Link>
               <Link href="/about">
-                <button className="w-full sm:w-auto px-6 py-3 border border-gray-300 hover:border-gray-400 text-gray-800 font-medium rounded-lg transition-colors">
+                <Button variant="outline" className="w-full sm:w-auto rounded-lg">
                   Learn more
-                </button>
+                </Button>
               </Link>
             </div>
           </div>
 
-          {/* Images Container - Grid layout for mobile */}
+          {/* Images Container */}
           <div className="lg:w-1/2">
             <div className="grid grid-cols-2 gap-4">
-              {/* Large image spanning full width */}
               <div className="col-span-2 h-64 md:h-72 overflow-hidden rounded-lg shadow-md">
                 <Image
                   src={RealImg}
@@ -53,8 +52,6 @@ const AboutHomeComponent = () => {
                   className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                 />
               </div>
-
-              {/* Two smaller images side by side */}
               <div className="h-48 md:h-56 overflow-hidden rounded-lg shadow-md">
                 <Image
                   src={LadyImg}

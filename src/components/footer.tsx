@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Mail } from "lucide-react";
 import { NewLogo } from "@/assets/images/Gallery/gallery";
+import { Separator } from "./ui/separator";
 
 const Footer = () => {
   const socialIcons = {
@@ -11,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer className="bg-background border-t">
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
@@ -22,10 +23,10 @@ const Footer = () => {
                 alt="Somo Transporters"
                 width={180}
                 height={60}
-                className="w-auto h-12 bg-white rounded-full "
+                className="w-auto h-12 bg-white rounded-full"
               />
             </Link>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Somo Transporters is a leading logistics provider specializing in
               cross-border haulage of petroleum products for reputable
               corporations in East Africa since 2006.
@@ -34,16 +35,11 @@ const Footer = () => {
               {Object.entries(socialIcons).map(([platform, path]) => (
                 <Link
                   key={platform}
-                  href={`https://www.facebook.com/share/18QsQoidbb/?mibextid=qi2Omg`}
-                  className="text-orange-500 hover:text-orange-600 transition-colors"
+                  href="https://www.facebook.com/share/18QsQoidbb/?mibextid=qi2Omg"
+                  className="text-primary hover:text-primary/80 transition-colors"
                   aria-label={`Follow us on ${platform}`}
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d={path} />
                   </svg>
                 </Link>
@@ -53,9 +49,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
-              Services
-            </h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Services</h3>
             <ul className="space-y-3">
               {[
                 "Transport & Logistics",
@@ -66,10 +60,8 @@ const Footer = () => {
               ].map((service) => (
                 <li key={service}>
                   <Link
-                    href={`/services/${service
-                      .toLowerCase()
-                      .replace(/ /g, "-")}`}
-                    className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
+                    href={`/services/${service.toLowerCase().replace(/ /g, "-")}`}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     {service}
                   </Link>
@@ -80,69 +72,46 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
-              Company
-            </h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li></li>
-              <li>
-                <Link
-                  href="/get-quote"
-                  className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
-                >
-                  Get personalized quotation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/join-us"
-                  className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
-                >
-                  Join us 
-                </Link>
-              </li>
+              {[
+                { label: "About Us", href: "/about" },
+                { label: "Contact Us", href: "/contact" },
+                { label: "Get personalized quotation", href: "/get-quote" },
+                { label: "Join us", href: "/join-us" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
-              Contact
-            </h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
-                <div className="text-gray-600 text-sm">
+                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <div className="text-muted-foreground text-sm">
                   <p>+254 725 718 871</p>
                   <p>+254 721 327 440</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
-                <p className="text-gray-600 text-sm">
-                  Nakuru - Nairobi Road, Pipeline Next to Flamingo Lodge,
-                  Nakuru, Kenya
+                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <p className="text-muted-foreground text-sm">
+                  Nakuru - Nairobi Road, Pipeline Next to Flamingo Lodge, Nakuru, Kenya
                 </p>
               </li>
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
-                <p className="text-gray-600 text-sm">
+                <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <p className="text-muted-foreground text-sm">
                   somotransportersltd@gmail.com
                 </p>
               </li>
@@ -150,26 +119,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-600 text-sm">
-              © 2025 Somo Transporters. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              {["Privacy Policy", "Terms & Conditions"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item
-                    .toLowerCase()
-                    .replace(/ & /g, "-")
-                    .replace(/ /g, "-")}`}
-                  className="text-gray-600 hover:text-orange-500 transition-colors text-sm"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
+        <Separator className="mt-12 mb-8" />
+
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p className="text-muted-foreground text-sm">
+            © 2025 Somo Transporters. All rights reserved.
+          </p>
+          <div className="flex space-x-6">
+            {["Privacy Policy", "Terms & Conditions"].map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
+                className="text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

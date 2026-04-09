@@ -35,7 +35,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2 } from "lucide-react";
 import { useContactForm } from "@/app/contact/useContactForm";
 
-// Form validation schema
 const driverFormSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
@@ -52,7 +51,6 @@ type DriverFormData = z.infer<typeof driverFormSchema>;
 export const DriverForm = () => {
   const { handleSubmit, statusMessage, loading } = useContactForm();
 
-  // Initialize form with validation schema
   const form = useForm<DriverFormData>({
     resolver: zodResolver(driverFormSchema),
     defaultValues: {
@@ -67,15 +65,12 @@ export const DriverForm = () => {
     },
   });
 
-  // Reset form when submission is successful
   useEffect(() => {
     if (statusMessage.text && !statusMessage.isError) {
       form.reset();
     }
   }, [statusMessage, form]);
 
-  // Reset status message when form changes
-  // Reset status message when form changes
   useEffect(() => {
     const subscription = form.watch(() => {
       if (statusMessage.text) {
@@ -84,6 +79,7 @@ export const DriverForm = () => {
     });
     return () => subscription.unsubscribe();
   }, [form, statusMessage]);
+
   const onSubmit = (data: DriverFormData) => {
     handleSubmit({
       ...data,
@@ -93,22 +89,22 @@ export const DriverForm = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Join Our Driver Team
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            We're looking for experienced drivers to join our growing team.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            We&apos;re looking for experienced drivers to join our growing team.
             Complete the form below to apply.
           </p>
         </div>
 
         <Card className="border-0 shadow-xl">
-          <CardHeader className="bg-orange-500 text-white rounded-t-xl">
+          <CardHeader className="bg-primary text-primary-foreground rounded-t-xl">
             <CardTitle className="text-2xl">Driver Application Form</CardTitle>
-            <CardDescription className="text-orange-100">
+            <CardDescription className="text-primary-foreground/80">
               All fields marked with * are required
             </CardDescription>
           </CardHeader>
@@ -120,14 +116,12 @@ export const DriverForm = () => {
                 className="space-y-8"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Personal Information Section */}
                   <div className="md:col-span-2">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    <h3 className="text-lg font-medium text-foreground mb-4">
                       Personal Information
                     </h3>
                   </div>
 
-                  {/* Full Name */}
                   <FormField
                     control={form.control}
                     name="fullName"
@@ -140,7 +134,7 @@ export const DriverForm = () => {
                           <Input
                             {...field}
                             placeholder="John Doe"
-                            className="h-12 focus-visible:ring-orange-500"
+                            className="h-12"
                           />
                         </FormControl>
                         <FormMessage />
@@ -148,7 +142,6 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Email */}
                   <FormField
                     control={form.control}
                     name="email"
@@ -162,7 +155,7 @@ export const DriverForm = () => {
                             {...field}
                             type="email"
                             placeholder="john@example.com"
-                            className="h-12 focus-visible:ring-orange-500"
+                            className="h-12"
                           />
                         </FormControl>
                         <FormMessage />
@@ -170,7 +163,6 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Phone Number */}
                   <FormField
                     control={form.control}
                     name="phoneNumber"
@@ -183,7 +175,7 @@ export const DriverForm = () => {
                           <Input
                             {...field}
                             placeholder="+254 700 000 000"
-                            className="h-12 focus-visible:ring-orange-500"
+                            className="h-12"
                           />
                         </FormControl>
                         <FormMessage />
@@ -191,38 +183,35 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Driver Information Section */}
                   <div className="md:col-span-2 mt-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    <h3 className="text-lg font-medium text-foreground mb-4">
                       Driver Information
                     </h3>
                   </div>
 
-                  {/* License Number */}
                   <FormField
                     control={form.control}
                     name="licenseNumber"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="font-medium">
-                          Driver's License Number *
+                          Driver&apos;s License Number *
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="ABC123456"
-                            className="h-12 focus-visible:ring-orange-500"
+                            className="h-12"
                           />
                         </FormControl>
                         <FormDescription>
-                          Enter your valid driver's license number
+                          Enter your valid driver&apos;s license number
                         </FormDescription>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
 
-                  {/* Experience */}
                   <FormField
                     control={form.control}
                     name="experienceYears"
@@ -236,7 +225,7 @@ export const DriverForm = () => {
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger className="h-12 focus-visible:ring-orange-500">
+                            <SelectTrigger className="h-12">
                               <SelectValue placeholder="Select experience" />
                             </SelectTrigger>
                           </FormControl>
@@ -260,7 +249,6 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Vehicle Type */}
                   <FormField
                     control={form.control}
                     name="vehicleType"
@@ -274,7 +262,7 @@ export const DriverForm = () => {
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger className="h-12 focus-visible:ring-orange-500">
+                            <SelectTrigger className="h-12">
                               <SelectValue placeholder="Select vehicle type" />
                             </SelectTrigger>
                           </FormControl>
@@ -295,7 +283,6 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Availability */}
                   <FormField
                     control={form.control}
                     name="availability"
@@ -309,7 +296,7 @@ export const DriverForm = () => {
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger className="h-12 focus-visible:ring-orange-500">
+                            <SelectTrigger className="h-12">
                               <SelectValue placeholder="Select availability" />
                             </SelectTrigger>
                           </FormControl>
@@ -330,14 +317,12 @@ export const DriverForm = () => {
                     )}
                   />
 
-                  {/* Additional Information Section */}
                   <div className="md:col-span-2 mt-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    <h3 className="text-lg font-medium text-foreground mb-4">
                       Additional Information
                     </h3>
                   </div>
 
-                  {/* Message */}
                   <FormField
                     control={form.control}
                     name="message"
@@ -350,7 +335,7 @@ export const DriverForm = () => {
                           <Textarea
                             {...field}
                             placeholder="Tell us about your driving experience, certifications, specialized skills or any other relevant information..."
-                            className="min-h-[150px] focus-visible:ring-orange-500"
+                            className="min-h-[150px]"
                           />
                         </FormControl>
                         <FormDescription>
@@ -363,12 +348,11 @@ export const DriverForm = () => {
                   />
                 </div>
 
-                {/* Status Message */}
                 {statusMessage.text && (
                   <Alert
                     className={
                       statusMessage.isError
-                        ? "bg-red-50 border-red-200 text-red-800"
+                        ? "bg-destructive/10 border-destructive/20 text-destructive"
                         : "bg-green-50 border-green-200 text-green-800"
                     }
                   >
@@ -376,10 +360,9 @@ export const DriverForm = () => {
                   </Alert>
                 )}
 
-                {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white text-lg font-medium transition-all duration-200 transform hover:translate-y-[-2px]"
+                  className="w-full h-12 text-lg font-medium transition-all duration-200 transform hover:translate-y-[-2px]"
                   disabled={loading}
                 >
                   {loading ? (
@@ -396,7 +379,7 @@ export const DriverForm = () => {
           </CardContent>
         </Card>
 
-        <div className="mt-8 text-center text-gray-500">
+        <div className="mt-8 text-center text-muted-foreground">
           <p>
             By submitting this application, you consent to our team reviewing
             your information. We respect your privacy and will only use your
