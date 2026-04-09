@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
-Sitemap:  https://somotransporters.co.ke/sitemap.xml    
+
+# Block internal/utility paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Sitemaps
+Sitemap: https://www.somotransporter.co.ke/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

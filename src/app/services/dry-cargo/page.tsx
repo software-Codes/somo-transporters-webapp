@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import NavbarHeader from "@/components/navabar-header";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Dry Cargo Transport Kenya & East Africa | Somo Transporters Ltd",
+  description:
+    "Bulk dry cargo transport across East Africa. 30-ton payload capacity, 535km/day fleet average, weatherproof securing. Somo Transporters Ltd — trusted since 2006.",
+  alternates: { canonical: "https://www.somotransporter.co.ke/services/dry-cargo" },
+  openGraph: {
+    title: "Dry Cargo Transport East Africa | Somo Transporters Ltd",
+    description: "Bulk dry cargo transport with 30-ton payload capacity and 535km/day fleet average across East Africa.",
+    url: "https://www.somotransporter.co.ke/services/dry-cargo",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+};
 
 const benefits = [
   {

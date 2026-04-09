@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import NavbarHeader from "@/components/navabar-header";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "LPG Transport Kenya & East Africa | Somo Transporters Ltd",
+  description:
+    "Safe and certified LPG transport across East Africa. Pressure-controlled tankers, GPS monitoring, HSSE-compliant drivers. Somo Transporters Ltd — trusted since 2006.",
+  alternates: { canonical: "https://www.somotransporter.co.ke/services/lpg-transport" },
+  openGraph: {
+    title: "LPG Transport East Africa | Somo Transporters Ltd",
+    description: "Certified LPG transport with pressure-controlled tankers and 24/7 GPS monitoring across East Africa.",
+    url: "https://www.somotransporter.co.ke/services/lpg-transport",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+};
 
 const benefits = [
   {

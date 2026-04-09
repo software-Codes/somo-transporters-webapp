@@ -1,0 +1,16 @@
+{
+  "name": "Somo Transporters Ltd",
+  "short_name": "Somo Transporters",
+  "description": "East Africa's leading petroleum products transporter since 2006",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import NavbarHeader from "@/components/navabar-header";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Bulk Petroleum Transport Kenya & East Africa | Somo Transporters",
+  description:
+    "Somo Transporters provides HSSE-compliant bulk petroleum transport across Kenya, Uganda, Tanzania, Rwanda & South Sudan. Real-time GPS tracking, 50+ tankers, cross-border haulage since 2006.",
+  alternates: { canonical: "https://www.somotransporter.co.ke/services/petroleum-transport" },
+  openGraph: {
+    title: "Bulk Petroleum Transport East Africa | Somo Transporters Ltd",
+    description: "HSSE-compliant bulk petroleum haulage across East Africa. 50+ tankers, GPS tracked, cross-border expertise since 2006.",
+    url: "https://www.somotransporter.co.ke/services/petroleum-transport",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+};
 
 const benefits = [
   {
