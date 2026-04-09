@@ -49,7 +49,7 @@ const ContactCTA = () => {
               personalized solutions.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto">
               {contactCards.map((card, index) => (
                 <Card key={index} className="bg-white/95 backdrop-blur hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6 text-center">

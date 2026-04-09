@@ -20,17 +20,17 @@ const HeroProfile = () => {
         </div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-2">
             Reliable & Efficient Logistics <br /> by{" "}
             <span className="text-primary">Somo Transporters</span>
           </h1>
-          <p className="text-white text-base md:text-lg max-w-2xl mb-8">
+          <p className="text-white text-sm sm:text-base md:text-lg max-w-2xl mb-8 px-2">
             Seamless, secure, and cost-effective transportation solutions
             across Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/join-us">
-              <Button size="lg" className="rounded-full px-12 py-6 text-lg">
+              <Button size="lg" className="rounded-full px-8 sm:px-12 py-6 text-base sm:text-lg w-full sm:w-auto">
                 Join us
               </Button>
             </Link>
@@ -38,7 +38,7 @@ const HeroProfile = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                className="rounded-full px-8 py-6 text-lg bg-white hover:bg-gray-100 text-gray-800"
+                className="rounded-full px-8 py-6 text-base sm:text-lg bg-white hover:bg-gray-100 text-gray-800 w-full sm:w-auto"
               >
                 Get Personalized Quotation
               </Button>

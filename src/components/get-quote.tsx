@@ -235,7 +235,7 @@ const GetQuotation = () => {
               <FaEnvelope className="text-primary text-3xl mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2 text-card-foreground">Email Us</h3>
               <p className="text-muted-foreground mb-2">Send us an email anytime</p>
-              <a href="mailto:somotransportersltd@gmail.com" className="text-primary font-bold block hover:underline">somotransportersltd@gmail.com</a>
+              <a href="mailto:somotransportersltd@gmail.com" className="text-primary font-bold block hover:underline text-sm sm:text-base break-all">somotransportersltd@gmail.com</a>
             </CardContent>
           </Card>
           <Card className="bg-muted/50 border-none text-center">

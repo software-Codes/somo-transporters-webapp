@@ -160,12 +160,12 @@ const AllServices = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/get-quote">
-              <Button variant="secondary" size="lg" className="rounded-full bg-white text-primary hover:bg-white/90">
+              <Button variant="secondary" size="lg" className="rounded-full bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
                 Request Consultation
               </Button>
             </Link>
             <Link href="/contact">
-              <Button variant="outline" size="lg" className="rounded-full border-2 border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="outline" size="lg" className="rounded-full border-2 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto">
                 Emergency Contact
               </Button>
             </Link>

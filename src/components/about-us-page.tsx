@@ -71,24 +71,24 @@ const AboutUsPage = () => {
       {/* Floating Download Button */}
       <button
         onClick={handleDownload}
-        className="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-xl transition-all duration-300 group z-50"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-primary hover:bg-primary/90 text-primary-foreground p-3 sm:p-4 rounded-full shadow-xl transition-all duration-300 group z-50"
         aria-label="Download company profile"
       >
         <FaFileDownload className="w-6 h-6" />
-        <span className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full bg-foreground text-background text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+        <span className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full bg-foreground text-background text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap hidden sm:block">
           Download Profile
         </span>
       </button>
 
       {/* Our Story Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 mt-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 mt-6 sm:mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image src={Gallery16} alt="Company history" fill className="object-cover" />
           </div>
 
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               About <span className="text-primary">Somo Transporters</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">

@@ -10,7 +10,6 @@ import {
   SomoBosieImg,
 } from "@/assets/images/administration/Administration";
 import { Card, CardContent } from "./ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const leadershipTeam = [
   { id: 1, name: "Somoire Keen", role: "Chief Executive Officer", team: "Executive Leadership", image: SomoBosieImg, level: 1 },
@@ -83,22 +82,19 @@ const LeadershipStructure = () => {
       </div>
 
       {/* Mobile List View */}
-      <div className="md:hidden space-y-4">
+      <div className="md:hidden space-y-3">
         <h3 className="text-xl font-bold text-center text-primary mb-6">
           Leadership Team
         </h3>
         {leadershipTeam.map((leader) => (
           <Card key={leader.id} className="border-l-4 border-l-primary">
-            <CardContent className="p-4 flex items-center gap-4">
-              <Avatar className="w-16 h-16 border-2 border-primary/30">
-                <AvatarImage src={typeof leader.image === "string" ? leader.image : undefined} alt={leader.name} />
-                <AvatarFallback className="bg-accent text-primary font-bold">
-                  {leader.name.split(" ").map((n) => n[0]).join("")}
-                </AvatarFallback>
-              </Avatar>
-              <div>
-                <h4 className="font-bold text-card-foreground">{leader.name}</h4>
-                <p className="text-primary text-sm">{leader.role}</p>
+            <CardContent className="p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-primary/30 flex-shrink-0">
+                <Image src={leader.image} alt={leader.name} fill className="object-cover" />
+              </div>
+              <div className="min-w-0">
+                <h4 className="font-bold text-card-foreground text-sm sm:text-base truncate">{leader.name}</h4>
+                <p className="text-primary text-xs sm:text-sm">{leader.role}</p>
                 <p className="text-muted-foreground text-xs">{leader.team}</p>
               </div>
             </CardContent>
