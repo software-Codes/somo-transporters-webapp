@@ -56,7 +56,7 @@ const AnimatedStats = () => {
                     {stat.icon}
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-card-foreground">
+                    <span className="text-3xl font-bold text-card-foreground">
                       {isMounted && (
                         <CountUp start={0} end={stat.value} duration={2.5} formattingFn={formatNumber} />
                       )}

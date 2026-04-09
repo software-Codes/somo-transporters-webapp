@@ -40,10 +40,10 @@ const ContactCTA = () => {
       <div className="relative z-10 py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
               Ready to Transform Your Logistics?
             </h2>
-            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
               Let Somo Transporters handle your transportation needs with
               precision and care. Our expert team is ready to provide you with
               personalized solutions.
@@ -65,7 +65,7 @@ const ContactCTA = () => {
 
             <div className="mt-12">
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-8 py-4 shadow-lg hover:shadow-xl group">
+                <Button size="lg" className="rounded-full text-base px-8 py-4 shadow-lg hover:shadow-xl group">
                   Contact Our Team
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

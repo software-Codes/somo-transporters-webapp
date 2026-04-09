@@ -35,7 +35,7 @@ const VehicleCrew = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
               Expand Your{" "}
               <span className="text-primary">Transport Business</span>
             </h2>
@@ -50,7 +50,7 @@ const VehicleCrew = () => {
                   <CardContent className="p-4 flex items-start gap-4">
                     {item.icon}
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-card-foreground">
+                      <h3 className="text-lg font-semibold mb-2 text-card-foreground">
                         {item.title}
                       </h3>
                       <p className="text-muted-foreground">{item.description}</p>

@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
               <Badge variant="secondary" className="mb-6 text-sm font-medium shadow-sm hover:scale-105 transition-transform">
                 WHY Make Deal With us
               </Badge>
-              <h2 className="text-3xl text-foreground md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-tight text-foreground">
                 <span className="text-primary block mt-2">
                   Petroleum & Logistics Needs
                 </span>

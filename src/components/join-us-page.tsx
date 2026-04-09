@@ -38,7 +38,7 @@ const JoinUsComponent = () => {
       {/* Benefits Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
             Benefits Of Joining Our Crew
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,7 +64,7 @@ const JoinUsComponent = () => {
       {/* Steps Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
             Steps to Join Our Crew
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -73,7 +73,7 @@ const JoinUsComponent = () => {
                 <div className="absolute -inset-1 bg-primary/20 rounded-xl blur opacity-25 group-hover:opacity-40 transition" />
                 <Card className="relative hover:border-primary transition-all">
                   <CardContent className="p-6">
-                    <div className="text-primary text-3xl font-bold mb-4">
+                    <div className="text-primary text-2xl font-bold mb-3">
                       0{index + 1}
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-card-foreground">

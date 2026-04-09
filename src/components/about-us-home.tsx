@@ -15,11 +15,11 @@ const AboutHomeComponent = () => {
             <Badge variant="secondary" className="mb-4 text-sm font-medium">
               ABOUT US
             </Badge>
-            <h2 className="text-3xl text-foreground md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Enhancing Efficiency in{" "}
               <span className="text-primary">Transport & Logistics</span>
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground text-sm sm:text-base mb-8">
               At Somo Transporters, we are dedicated to providing top-notch
               Logistics transportation. We specialize in all areas of
               transportation and logistics. Somo Transporters provides

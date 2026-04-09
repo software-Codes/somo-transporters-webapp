@@ -64,7 +64,7 @@ const AllServices = () => {
     <div className="w-full bg-background">
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl text-foreground md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-2xl text-foreground md:text-3xl font-bold text-center mb-12">
           Our Core Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -101,7 +101,7 @@ const AllServices = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            <h2 className="text-3xl text-foreground font-bold">Why Choose Us</h2>
+            <h2 className="text-2xl text-foreground font-bold">Why Choose Us</h2>
             <p className="text-muted-foreground">
               With over 15 years experience in East African logistics, we
               combine local expertise with global standards
@@ -140,7 +140,7 @@ const AllServices = () => {
                 { value: "535km", label: "Daily Truck Average" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-4xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-3xl font-bold text-primary">{stat.value}</div>
                   <div className="text-muted-foreground">{stat.label}</div>
                 </div>
               ))}
@@ -152,7 +152,7 @@ const AllServices = () => {
       {/* CTA Section */}
       <div className="bg-primary text-primary-foreground py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-2xl font-bold mb-6">
             Ready to Streamline Your Logistics?
           </h2>
           <p className="mb-8 text-lg text-primary-foreground/90">

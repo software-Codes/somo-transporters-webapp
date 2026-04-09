@@ -10,7 +10,7 @@ export const useForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent, formData: any) => {
+  const handleSubmit = async (e: React.FormEvent, formData: Record<string, string>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -52,7 +52,7 @@ export const useForm = () => {
   };
 
   // Format the form data into a structured message
-  const formatMessageFromFormData = (data: any) => {
+  const formatMessageFromFormData = (data: Record<string, string>) => {
     return `
 QUOTATION REQUEST DETAILS:
 

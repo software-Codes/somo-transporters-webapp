@@ -21,7 +21,7 @@ const NotFound = () => {
           transition={{ duration: 0.6 }}
         >
           <motion.h1
-            className="text-8xl sm:text-9xl font-extrabold text-primary"
+            className="text-7xl sm:text-8xl font-extrabold text-primary"
             initial={{ scale: 0.5 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 200 }}

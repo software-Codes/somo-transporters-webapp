@@ -40,7 +40,7 @@ const LpgTransport = () => {
             <div className="absolute inset-0 bg-black/50" />
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               LPG <span className="text-primary">Transport</span>
             </h1>
             <p className="text-white text-lg md:text-xl">Safe and efficient LPG logistics solutions across East Africa</p>

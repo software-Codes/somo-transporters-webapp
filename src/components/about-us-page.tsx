@@ -2,7 +2,6 @@
 import React from "react";
 import { FaTachometerAlt, FaShieldAlt, FaUsers, FaMapMarkedAlt, FaGlobeAfrica, FaFileDownload } from "react-icons/fa";
 import Footer from "./footer";
-import Link from "next/link";
 import { Gallery16 } from "@/assets/images/Gallery/gallery";
 import Image from "next/image";
 import LeadershipStructure from "./LeadershipStructure";
@@ -88,7 +87,7 @@ const AboutUsPage = () => {
           </div>
 
           <div className="space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               About <span className="text-primary">Somo Transporters</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -131,7 +130,7 @@ const AboutUsPage = () => {
       {/* Achievements Section */}
       <div className="bg-gradient-to-br from-accent/50 to-accent py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl text-foreground md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">
             Our Milestones
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,7 +140,7 @@ const AboutUsPage = () => {
                   <div className="text-primary bg-accent p-4 rounded-full">
                     {stat.icon}
                   </div>
-                  <h3 className="text-4xl font-bold text-card-foreground">{stat.value}</h3>
+                  <h3 className="text-3xl font-bold text-card-foreground">{stat.value}</h3>
                   <p className="text-lg font-semibold text-card-foreground">{stat.label}</p>
                   <p className="text-sm text-muted-foreground">{stat.description}</p>
                 </CardContent>
@@ -187,7 +186,7 @@ const AboutUsPage = () => {
 
         {/* Core Values */}
         <div className="max-w-7xl mx-auto px-4 mt-16">
-          <h2 className="text-3xl text-foreground font-bold mb-12 text-center">
+          <h2 className="text-2xl text-foreground font-bold mb-12 text-center">
             Core Values
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

@@ -52,7 +52,7 @@ const LeadershipStructure = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-3xl text-foreground font-bold mb-12 text-center">
+      <h2 className="text-2xl text-foreground font-bold mb-12 text-center">
         Leadership Structure
       </h2>
 
